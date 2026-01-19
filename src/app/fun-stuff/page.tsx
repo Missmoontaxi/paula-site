@@ -9,30 +9,34 @@ const categories = [
   {
     title: 'Travel',
     icon: Plane,
-    description: 'Exploring the world one glass of wine at a time',
-    image: 'https://static.wixstatic.com/media/e0d75d_c1eb57a9955c4f679afe248f080abf1a~mv2.jpg/v1/fill/w_800,h_800,al_c,q_80/e0d75d_c1eb57a9955c4f679afe248f080abf1a~mv2.jpg',
+    description: 'Exploring the world one adventure at a time',
+    image: '/images/IMG_5731.jpg',
     color: 'from-amber-500/80',
+    href: '/fun-stuff/travel',
   },
   {
     title: 'To Ride is to Live',
     icon: Mountain,
     description: 'Snowboarding adventures in the mountains',
-    image: 'https://static.wixstatic.com/media/e0d75d_8cd031e14f104e90b132b27f44cde696~mv2.jpg/v1/fill/w_800,h_800,al_c,q_80/e0d75d_8cd031e14f104e90b132b27f44cde696~mv2.jpg',
+    image: '/images/IMG_4293.jpg',
     color: 'from-blue-500/80',
+    href: '/fun-stuff/snowboarding',
   },
   {
     title: 'Making Things',
     icon: Wine,
     description: 'Winemaking, vibecoding, and creative pursuits',
-    image: 'https://static.wixstatic.com/media/e0d75d_1420f3f4090f4e98b75e0cc7be83775e~mv2.jpg/v1/fill/w_800,h_800,al_c,q_80/e0d75d_1420f3f4090f4e98b75e0cc7be83775e~mv2.jpg',
+    image: '/images/IMG_3569.jpg',
     color: 'from-purple-500/80',
+    href: '/fun-stuff/making-things',
   },
   {
     title: 'NYC Pics',
     icon: Building2,
     description: 'Capturing the magic of New York City',
-    image: 'https://static.wixstatic.com/media/e0d75d_4e7c2f6a5c8d4c8d8d8d8d8d8d8d8d8d~mv2.jpg/v1/fill/w_800,h_800,al_c,q_80/e0d75d_4e7c2f6a5c8d4c8d8d8d8d8d8d8d8d8d~mv2.jpg',
+    image: '/images/NYC1.jpg',
     color: 'from-orange-500/80',
+    href: '/fun-stuff/nyc',
   },
 ]
 
@@ -71,38 +75,39 @@ export default function FunStuffPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-6">
             {categories.map((category, index) => (
-              <motion.div
-                key={category.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group relative aspect-[4/3] rounded-2xl overflow-hidden cursor-pointer"
-              >
-                {/* Background Image */}
-                <Image
-                  src={category.image}
-                  alt={category.title}
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-110"
-                />
+              <Link key={category.title} href={category.href}>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="group relative aspect-[4/3] rounded-2xl overflow-hidden cursor-pointer"
+                >
+                  {/* Background Image */}
+                  <Image
+                    src={category.image}
+                    alt={category.title}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
 
-                {/* Gradient Overlay */}
-                <div className={`absolute inset-0 bg-gradient-to-t ${category.color} to-transparent opacity-60 group-hover:opacity-70 transition-opacity`} />
+                  {/* Gradient Overlay */}
+                  <div className={`absolute inset-0 bg-gradient-to-t ${category.color} to-transparent opacity-60 group-hover:opacity-70 transition-opacity`} />
 
-                {/* Content */}
-                <div className="absolute inset-0 flex flex-col justify-end p-8">
-                  <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center mb-4">
-                    <category.icon size={24} className="text-white" />
+                  {/* Content */}
+                  <div className="absolute inset-0 flex flex-col justify-end p-8">
+                    <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center mb-4">
+                      <category.icon size={24} className="text-white" />
+                    </div>
+                    <h3 className="font-serif text-2xl font-bold text-white mb-2">
+                      {category.title}
+                    </h3>
+                    <p className="text-white/80 text-sm">
+                      {category.description}
+                    </p>
                   </div>
-                  <h3 className="font-serif text-2xl font-bold text-white mb-2">
-                    {category.title}
-                  </h3>
-                  <p className="text-white/80 text-sm">
-                    {category.description}
-                  </p>
-                </div>
-              </motion.div>
+                </motion.div>
+              </Link>
             ))}
           </div>
         </div>

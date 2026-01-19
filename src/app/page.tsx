@@ -225,10 +225,10 @@ export default function Home() {
           {/* Preview Grid */}
           <div className="grid md:grid-cols-4 gap-4">
             {[
-              { title: 'Travel', image: 'https://static.wixstatic.com/media/e0d75d_c1eb57a9955c4f679afe248f080abf1a~mv2.jpg/v1/fill/w_480,h_480,al_c,q_80/e0d75d_c1eb57a9955c4f679afe248f080abf1a~mv2.jpg' },
-              { title: 'Snowboarding', image: 'https://static.wixstatic.com/media/e0d75d_8cd031e14f104e90b132b27f44cde696~mv2.jpg/v1/fill/w_480,h_480,al_c,q_80/e0d75d_8cd031e14f104e90b132b27f44cde696~mv2.jpg' },
-              { title: 'Making Things', image: 'https://static.wixstatic.com/media/e0d75d_1420f3f4090f4e98b75e0cc7be83775e~mv2.jpg/v1/fill/w_480,h_480,al_c,q_80/e0d75d_1420f3f4090f4e98b75e0cc7be83775e~mv2.jpg' },
-              { title: 'NYC', image: 'https://static.wixstatic.com/media/e0d75d_4e7c2f6a5c8d4c8d8d8d8d8d8d8d8d8d~mv2.jpg/v1/fill/w_480,h_480,al_c,q_80/e0d75d_4e7c2f6a5c8d4c8d8d8d8d8d8d8d8d8d~mv2.jpg' },
+              { title: 'Travel', image: '/images/IMG_5731.jpg' },
+              { title: 'Snowboarding', image: '/images/IMG_4293.jpg' },
+              { title: 'Making Things', image: '/images/IMG_3569.jpg' },
+              { title: 'NYC', image: '/images/NYC1.jpg' },
             ].map((item, index) => (
               <motion.div
                 key={item.title}
