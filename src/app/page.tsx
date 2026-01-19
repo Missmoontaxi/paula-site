@@ -225,30 +225,31 @@ export default function Home() {
           {/* Preview Grid */}
           <div className="grid md:grid-cols-4 gap-4">
             {[
-              { title: 'Travel', image: '/images/IMG_5731.jpg' },
-              { title: 'Snowboarding', image: '/images/IMG_4293.jpg' },
-              { title: 'Making Things', image: '/images/IMG_3569.jpg' },
-              { title: 'NYC', image: '/images/NYC1.jpg' },
+              { title: 'Travel', image: '/images/IMG_5731.jpg', href: '/fun-stuff/travel' },
+              { title: 'Snowboarding', image: '/images/IMG_4293.jpg', href: '/fun-stuff/snowboarding' },
+              { title: 'Making Things', image: '/images/IMG_3569.jpg', href: '/fun-stuff/making-things' },
+              { title: 'NYC', image: '/images/NYC1.jpg', href: '/fun-stuff/nyc' },
             ].map((item, index) => (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                className="group relative aspect-square rounded-xl overflow-hidden cursor-pointer"
-              >
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                <span className="absolute bottom-4 left-4 text-white font-medium">
-                  {item.title}
-                </span>
-              </motion.div>
+              <Link key={item.title} href={item.href}>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: index * 0.1 }}
+                  className="group relative aspect-square rounded-xl overflow-hidden cursor-pointer"
+                >
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                  <span className="absolute bottom-4 left-4 text-white font-medium">
+                    {item.title}
+                  </span>
+                </motion.div>
+              </Link>
             ))}
           </div>
 
