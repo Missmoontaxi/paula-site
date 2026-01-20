@@ -9,11 +9,11 @@ const highlights = [
   {
     icon: MapPin,
     title: 'Based in NYC',
-    description: 'Living and building in New York City\'s vibrant tech scene',
+    description: 'Living and building in New York City\'s vibrant AI and tech scene',
   },
   {
     icon: Briefcase,
-    title: '20+ Years Experience',
+    title: 'Tech & Business Duality',
     description: 'From biotech startups to Fortune 50 companies',
   },
   {
@@ -51,7 +51,7 @@ export default function AboutPage() {
                     src="https://static.wixstatic.com/media/e0d75d_e67552174f0549f08b06c2d4d0ae127c~mv2.jpg/v1/fill/w_500,h_600,al_c,q_80/e0d75d_e67552174f0549f08b06c2d4d0ae127c~mv2.jpg"
                     alt="Paula headshot"
                     fill
-                    className="object-cover"
+                    className="object-cover object-top"
                   />
                 </div>
               </div>
@@ -112,7 +112,7 @@ export default function AboutPage() {
               My Story
             </h2>
 
-            <div className="prose prose-lg max-w-none text-slate-dark/80">
+            <div className="prose prose-lg max-w-none text-slate-dark/80 text-center">
               <p>
                 I am the youngest of five, grew up active in the Midwest playing sports and
                 keeping up with my siblings. I was always curious, loved science and studied
@@ -169,7 +169,7 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="font-serif text-3xl md:text-4xl font-bold mb-8">
-              As a Leader
+              Leadership
             </h2>
 
             <p className="text-xl text-white/80 mb-6">
@@ -183,8 +183,8 @@ export default function AboutPage() {
               boards, investors and fellow rock star executives.
             </p>
 
-            <div className="inline-block bg-teal-accent/20 border border-teal-accent/30 rounded-xl px-8 py-4">
-              <p className="text-teal-light font-medium text-lg">
+            <div className="inline-block bg-deep-yellow/20 border border-deep-yellow/40 rounded-xl px-8 py-4">
+              <p className="text-deep-yellow font-medium text-lg">
                 Let's work together!
               </p>
             </div>
