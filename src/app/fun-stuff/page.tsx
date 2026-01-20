@@ -64,7 +64,7 @@ export default function FunStuffPage() {
               Fun Stuff
             </h1>
             <p className="text-xl text-slate-dark/70 max-w-2xl mx-auto">
-              Life is short. Get after it.
+              Live Curious. Stay Bold.
             </p>
           </motion.div>
         </div>
@@ -192,7 +192,7 @@ export default function FunStuffPage() {
             transition={{ duration: 0.6 }}
           >
             <blockquote className="font-serif text-3xl md:text-4xl font-bold italic mb-6">
-              "Life is short. Get after it."
+              "Live Curious. Stay Bold."
             </blockquote>
             <p className="text-white/60">
               — My personal mantra

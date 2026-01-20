@@ -69,7 +69,7 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                 <Link
                   href="/about"
-                  className="inline-flex items-center justify-center gap-2 bg-teal-accent hover:bg-teal-light text-white px-6 py-3 rounded-lg transition-colors font-medium"
+                  className="inline-flex items-center justify-center gap-2 bg-navy-denim hover:bg-navy-denim/90 text-white px-6 py-3 rounded-lg transition-colors font-medium"
                 >
                   Learn More
                   <ArrowRight size={18} />
@@ -118,7 +118,7 @@ export default function Home() {
               What I Do
             </h2>
             <p className="text-slate-dark/70 max-w-2xl mx-auto">
-              Two decades of experience spanning biotech, big tech, and entertainment—always at the intersection of technology and transformation.
+              Transformative leader and systems thinker building teams that turn vision into reality. Digital Native with experience spanning biotech to big tech to AI.
             </p>
           </motion.div>
 
@@ -171,17 +171,15 @@ export default function Home() {
                 An Unconventional Path
               </h2>
               <p className="text-slate-dark/70 mb-6">
-                From automating drug discovery in Boulder to leading Disney+ partnerships in LA,
-                my career has been defined by following curiosity and embracing transformation.
+                From automating drug discovery in Boulder to Imagineering in LA to leading Disney+ partnerships in New York, my career has been defined by following curiosity and embracing transformation.
               </p>
               <p className="text-slate-dark/70 mb-8">
-                Today, I'm building community at The AI Collective while advising founders
-                and executives on AI strategy.
+                Today, I'm building community at The AI Collective while advising founders and executives on AI strategy.
               </p>
 
               {/* Company Logos / Names */}
               <div className="flex flex-wrap gap-4 mb-8">
-                {['Disney', 'Yahoo!', 'AI Collective', 'Cytokinetics'].map((company) => (
+                {['AI Collective', 'Disney', 'Yahoo!', 'Cytokinetics'].map((company) => (
                   <span
                     key={company}
                     className="px-4 py-2 bg-cream rounded-full text-sm font-medium text-slate-dark/80"
@@ -214,11 +212,10 @@ export default function Home() {
             className="text-center mb-12"
           >
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-slate-dark mb-4">
-              Life is Short. Get After It.
+              Live Curious. Stay Bold.
             </h2>
             <p className="text-slate-dark/70 max-w-2xl mx-auto">
-              When I'm not building the future of tech, you'll find me on the slopes,
-              making wine, or exploring the world.
+              When I'm not building the future of tech, you'll find me on the slopes, vibe coding, making wine, or exploring the world.
             </p>
           </motion.div>
 
@@ -284,7 +281,7 @@ export default function Home() {
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 bg-teal-accent hover:bg-teal-light text-white px-8 py-4 rounded-lg transition-colors font-medium text-lg"
+              className="inline-flex items-center gap-2 bg-navy-denim hover:bg-navy-denim/90 text-white px-8 py-4 rounded-lg transition-colors font-medium text-lg"
             >
               Get in Touch
               <ArrowRight size={20} />

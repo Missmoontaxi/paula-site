@@ -15,6 +15,7 @@ const config: Config = {
         'slate-dark': '#2D3748',
         'teal-accent': '#1A5F5A',
         'teal-light': '#2D8A85',
+        'navy-denim': '#1E3A5F',
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
