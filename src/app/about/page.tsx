@@ -115,43 +115,31 @@ export default function AboutPage() {
             <div className="prose prose-lg max-w-none text-slate-dark/80 text-center">
               <p>
                 I am the youngest of five, grew up active in the Midwest playing sports and
-                keeping up with my siblings. I was always curious, loved science and studied
-                pre-med in college.
-              </p>
-
-              <p>
-                The day after my final, I packed up what little I had and took my chances in
-                the Rocky Mountains. My first job was automating drug discovery research and
-                building AI-enabled data analysis apps. I was immediately hooked and decided
-                to skip Med School. I was <strong>ALL IN on tech</strong>.
+                looking for the next adventure. I was always curious, loved science and studied
+                pre-med in college. The day after my final, I packed up what little I had and
+                took my chances in the Rocky Mountains. My first job was automating drug discovery
+                research and building AI-enabled data analysis apps. I was immediately hooked and
+                decided to skip Med School. I was <strong>ALL IN on tech</strong>.
               </p>
 
               <p>
                 My journey led me along an unconventional path. Each twist and turn inspired
                 by an opportunity to start something new. I've always been drawn to the
                 creativity in building from scratch and have grown to appreciate how messy
-                transformation can be.
-              </p>
-
-              <p>
-                The one common theme? <strong>Technology</strong>. From lab robotics to streaming
-                to vibe coding, I always find ways to ride the wave of innovation.
+                transformation can be. The one common theme? <strong>Technology</strong>. From lab
+                robotics to streaming to vibe coding, I always find ways to ride the wave of innovation.
               </p>
 
               <p>
                 I've been lucky to have a career as a transformative leader and accomplished
-                operator for both startups and Fortune 50 companies in Boulder, San Francisco,
-                Los Angeles and New York.
+                executive for both startups and Fortune 50 companies in Boulder, San Francisco,
+                Los Angeles and New York. My roles flowed from biotech to big tech to big
+                entertainment and now I am helping build a community of like minded, AI enthusiasts
+                who share the same values and deep curiosities as I do.
               </p>
 
               <p>
-                My roles flowed from biotech to big tech to big entertainment and now I am
-                helping build a community of like minded, AI enthusiasts who share the same
-                values and deep curiosities as I do.
-              </p>
-
-              <p>
-                I am always seeking new connections, the latest innovation, and best examples
+                I am always seeking new connections, the latest AI innovation, and best examples
                 of breakthrough technologies.
               </p>
             </div>
