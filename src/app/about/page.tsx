@@ -112,7 +112,7 @@ export default function AboutPage() {
               My Story
             </h2>
 
-            <div className="prose prose-lg max-w-none text-slate-dark/80 text-center">
+            <div className="max-w-none text-slate-dark/80 text-center text-lg space-y-8">
               <p>
                 I am the youngest of five, grew up active in the Midwest playing sports and
                 looking for the next adventure. I was always curious, loved science and studied
