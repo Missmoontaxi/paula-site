@@ -3,266 +3,186 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { ArrowRight, Sparkles } from 'lucide-react'
+import { Plane, Mountain, Wine, Building2, ExternalLink } from 'lucide-react'
 
-const skills = [
-  'Executive Leadership',
-  'Artificial Intelligence',
-  'Product Management',
-  'Digital Transformation',
-  'Strategic Partnerships',
-  'Innovation',
+const categories = [
+  {
+    title: 'Travel',
+    icon: Plane,
+    description: 'Exploring the world one adventure at a time',
+    image: '/images/IMG_5731.jpg',
+    color: 'from-amber-500/80',
+    href: '/fun-stuff/travel',
+  },
+  {
+    title: 'To Ride is to Live',
+    icon: Mountain,
+    description: 'Snowboarding adventures in the mountains',
+    image: '/images/IMG_4293.jpg',
+    color: 'from-blue-500/80',
+    href: '/fun-stuff/snowboarding',
+  },
+  {
+    title: 'Making Things',
+    icon: Wine,
+    description: 'Winemaking, vibecoding, and creative pursuits',
+    image: '/images/IMG_3569.jpg',
+    color: 'from-purple-500/80',
+    href: '/fun-stuff/making-things',
+  },
+  {
+    title: 'NYC Pics',
+    icon: Building2,
+    description: 'Capturing the magic of New York City',
+    image: '/images/NYC1.jpg',
+    color: 'from-orange-500/80',
+    href: '/fun-stuff/nyc',
+  },
 ]
 
-const fadeInUp = {
-  initial: { opacity: 0, y: 30 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.6 }
-}
+const sideProjects = [
+  {
+    title: 'MemeMe',
+    description: 'A vibecoded meme discovery app. Come on in and hang out for a bit!',
+    url: 'https://www.welcometomemetown.com',
+    tags: ['Vibecoding', 'AI', 'Fun'],
+  },
+]
 
-export default function Home() {
+export default function FunStuffPage() {
   return (
     <>
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="https://static.wixstatic.com/media/e0d75d_26b782877f3c48adb85ad537fe35f47c~mv2.jpg/v1/fill/w_1920,h_1080,al_c,q_85/e0d75d_26b782877f3c48adb85ad537fe35f47c~mv2.jpg"
-            alt="Mountain landscape with aurora"
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-slate-dark/30 via-transparent to-cream" />
-        </div>
-
-        {/* Hero Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-6 pt-24 pb-32">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* Text Content */}
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center md:text-left"
-            >
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.2 }}
-                className="inline-flex items-center gap-2 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full text-sm text-teal-accent mb-6"
-              >
-                <Sparkles size={16} />
-                <span>AI Enthusiast & Leader</span>
-              </motion.div>
-
-              <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 drop-shadow-lg">
-                Paula<br />McMahon
-              </h1>
-
-              <p className="text-lg md:text-xl text-white/90 mb-8 max-w-lg drop-shadow">
-                Transformative leader driving innovation in media, tech, science and AI.
-                Based in New York City.
-              </p>
-
-              <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                <Link
-                  href="/about"
-                  className="inline-flex items-center justify-center gap-2 bg-navy-denim hover:bg-navy-denim/90 text-white px-6 py-3 rounded-lg transition-colors font-medium"
-                >
-                  Learn More
-                  <ArrowRight size={18} />
-                </Link>
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center justify-center gap-2 bg-white/90 hover:bg-white text-slate-dark px-6 py-3 rounded-lg transition-colors font-medium"
-                >
-                  Get in Touch
-                </Link>
-              </div>
-            </motion.div>
-
-            {/* Headshot */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="hidden md:block"
-            >
-              <div className="relative w-80 h-96 mx-auto">
-                <div className="absolute inset-0 bg-teal-accent/20 rounded-2xl transform rotate-3" />
-                <Image
-                  src="https://static.wixstatic.com/media/e0d75d_ee0785572e6e4c498deac51919fda54d~mv2.jpeg/v1/fill/w_600,h_720,al_c,q_85/e0d75d_ee0785572e6e4c498deac51919fda54d~mv2.jpeg"
-                  alt="Paula McMahon"
-                  fill
-                  className="object-cover rounded-2xl shadow-2xl"
-                />
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Skills Snapshot */}
-      <section className="py-20 bg-cream">
-        <div className="max-w-7xl mx-auto px-6">
+      {/* Hero */}
+      <section className="pt-32 pb-16 bg-cream">
+        <div className="max-w-7xl mx-auto px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-12"
           >
-            <h2 className="font-serif text-3xl md:text-4xl font-bold text-slate-dark mb-4">
-              What I Do
-            </h2>
-            <p className="text-slate-dark/70 max-w-2xl mx-auto">
-              Transformative leader and systems thinker building teams that turn vision into reality. Digital Native with experience spanning biotech to big tech to AI.
-            </p>
-          </motion.div>
-
-          {/* Skills Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            {skills.map((skill, index) => (
-              <motion.div
-                key={skill}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                className="bg-white rounded-xl p-4 text-center shadow-sm hover:shadow-md transition-shadow"
-              >
-                <span className="text-sm font-medium text-slate-dark">{skill}</span>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Career Highlights */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* Image */}
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="relative h-[400px] rounded-2xl overflow-hidden"
-            >
-              <Image
-                src="https://static.wixstatic.com/media/e0d75d_74c20e7d748945219625bd1924ed4acb~mv2.png/v1/fill/w_800,h_600,al_c,q_90/e0d75d_74c20e7d748945219625bd1924ed4acb~mv2.png"
-                alt="Abstract technology visualization"
-                fill
-                className="object-cover"
-              />
-            </motion.div>
-
-            {/* Content */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <h2 className="font-serif text-3xl md:text-4xl font-bold text-slate-dark mb-6">
-                An Unconventional Path
-              </h2>
-              <p className="text-slate-dark/70 mb-6">
-                From automating drug discovery in Boulder to Imagineering in LA to leading Disney+ partnerships in New York, my career has been defined by following curiosity and embracing transformation.
-              </p>
-              <p className="text-slate-dark/70 mb-8">
-                Today, I'm building community at The AI Collective while advising founders and executives on AI strategy.
-              </p>
-
-              {/* Company Logos / Names */}
-              <div className="flex flex-wrap gap-4 mb-8">
-                {['AI Collective', 'Disney', 'Yahoo!', 'Cytokinetics'].map((company) => (
-                  <span
-                    key={company}
-                    className="px-4 py-2 bg-cream rounded-full text-sm font-medium text-slate-dark/80"
-                  >
-                    {company}
-                  </span>
-                ))}
-              </div>
-
-              <Link
-                href="/experience"
-                className="inline-flex items-center gap-2 text-teal-accent hover:text-teal-light font-medium transition-colors"
-              >
-                View Full Experience
-                <ArrowRight size={18} />
-              </Link>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Fun Stuff Teaser */}
-      <section className="py-20 bg-cream">
-        <div className="max-w-7xl mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12"
-          >
-            <h2 className="font-serif text-3xl md:text-4xl font-bold text-slate-dark mb-4">
+            <h1 className="font-serif text-4xl md:text-5xl font-bold text-slate-dark mb-6">
+              Fun Stuff
+            </h1>
+            <p className="text-xl text-slate-dark/70 max-w-2xl mx-auto">
               Live Curious. Stay Bold.
-            </h2>
-            <p className="text-slate-dark/70 max-w-2xl mx-auto">
-              When I'm not building the future of tech, you'll find me on the slopes, vibe coding, making wine, or exploring the world.
             </p>
           </motion.div>
+        </div>
+      </section>
 
-          {/* Preview Grid */}
-          <div className="grid md:grid-cols-4 gap-4">
-            {[
-              { title: 'Travel', image: '/images/IMG_5731.jpg', href: '/fun-stuff/travel' },
-              { title: 'Snowboarding', image: '/images/IMG_4293.jpg', href: '/fun-stuff/snowboarding' },
-              { title: 'Making Things', image: '/images/IMG_3569.jpg', href: '/fun-stuff/making-things' },
-              { title: 'NYC', image: '/images/NYC1.jpg', href: '/fun-stuff/nyc' },
-            ].map((item, index) => (
-              <Link key={item.title} href={item.href}>
+      {/* Categories Grid */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-6">
+            {categories.map((category, index) => (
+              <Link key={category.title} href={category.href}>
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
-                  className="group relative aspect-square rounded-xl overflow-hidden cursor-pointer"
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="group relative aspect-[4/3] rounded-2xl overflow-hidden cursor-pointer"
                 >
+                  {/* Background Image */}
                   <Image
-                    src={item.image}
-                    alt={item.title}
+                    src={category.image}
+                    alt={category.title}
                     fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="object-cover transition-transform duration-700 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                  <span className="absolute bottom-4 left-4 text-white font-medium">
-                    {item.title}
-                  </span>
+
+                  {/* Gradient Overlay */}
+                  <div className={`absolute inset-0 bg-gradient-to-t ${category.color} to-transparent opacity-60 group-hover:opacity-70 transition-opacity`} />
+
+                  {/* Content */}
+                  <div className="absolute inset-0 flex flex-col justify-end p-8">
+                    <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center mb-4">
+                      <category.icon size={24} className="text-white" />
+                    </div>
+                    <h3 className="font-serif text-2xl font-bold text-white mb-2">
+                      {category.title}
+                    </h3>
+                    <p className="text-white/80 text-sm">
+                      {category.description}
+                    </p>
+                  </div>
                 </motion.div>
               </Link>
             ))}
           </div>
+        </div>
+      </section>
 
-          <div className="text-center mt-8">
-            <Link
-              href="/fun-stuff"
-              className="inline-flex items-center gap-2 text-teal-accent hover:text-teal-light font-medium transition-colors"
+      {/* Side Projects */}
+      <section className="py-16 bg-cream">
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <h2 className="font-serif text-3xl font-bold text-slate-dark mb-4">
+              Things I've Built
+            </h2>
+            <p className="text-slate-dark/70 max-w-2xl mx-auto">
+              Side projects and experiments in vibecoding
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {sideProjects.map((project, index) => (
+              <motion.a
+                key={project.title}
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="group bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all"
+              >
+                <div className="flex items-start justify-between mb-4">
+                  <h3 className="font-serif text-xl font-bold text-slate-dark group-hover:text-teal-accent transition-colors">
+                    {project.title}
+                  </h3>
+                  <ExternalLink size={18} className="text-slate-dark/40 group-hover:text-teal-accent transition-colors" />
+                </div>
+                <p className="text-slate-dark/70 text-sm mb-4">
+                  {project.description}
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {project.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="px-3 py-1 bg-teal-accent/10 text-teal-accent text-xs font-medium rounded-full"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </motion.a>
+            ))}
+
+            {/* Add More Card */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="bg-cream border-2 border-dashed border-slate-dark/20 rounded-xl p-6 flex items-center justify-center"
             >
-              Explore More
-              <ArrowRight size={18} />
-            </Link>
+              <p className="text-slate-dark/50 text-center">
+                More projects coming soon...
+              </p>
+            </motion.div>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* Quote */}
       <section className="py-20 bg-slate-dark text-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <motion.div
@@ -271,21 +191,12 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="font-serif text-3xl md:text-4xl font-bold mb-6">
-              Let's Work Together
-            </h2>
-            <p className="text-white/70 mb-8 max-w-2xl mx-auto">
-              I'm always looking for new connections and exciting opportunities.
-              Whether you're building something new or transforming something established,
-              I'd love to hear from you.
+            <blockquote className="font-serif text-3xl md:text-4xl font-bold italic mb-6">
+              "Live Curious. Stay Bold."
+            </blockquote>
+            <p className="text-white/60">
+              — My personal mantra
             </p>
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 bg-navy-denim hover:bg-navy-denim/90 text-white px-8 py-4 rounded-lg transition-colors font-medium text-lg"
-            >
-              Get in Touch
-              <ArrowRight size={20} />
-            </Link>
           </motion.div>
         </div>
       </section>
