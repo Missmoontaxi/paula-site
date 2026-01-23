@@ -119,7 +119,7 @@ export default function AboutPage() {
                 pre-med in college. The day after my final, I packed what little I had and
                 took my chances learning to snowboard in the Rocky Mountains. My first job 
                 was automating drug discovery research and building AI-enabled data analysis apps. 
-                I was immediately hooked and <strong>ALL IN on tech</strong>.
+                I was immediately hooked and <strong>ALL IN on Tech</strong>
               </p>
 
               <p>
