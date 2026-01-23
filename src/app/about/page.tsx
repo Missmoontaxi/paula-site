@@ -115,11 +115,11 @@ export default function AboutPage() {
             <div className="max-w-none text-slate-dark/80 text-center text-lg space-y-8">
               <p>
                 I am the youngest of five, grew up active in the Midwest playing sports and
-                looking for the next adventure. I was always curious, loved science and studied
-                pre-med in college. The day after my final, I packed up what little I had and
-                took my chances in the Rocky Mountains. My first job was automating drug discovery
-                research and building AI-enabled data analysis apps. I was immediately hooked and
-                decided to skip Med School. I was <strong>ALL IN on tech</strong>.
+                always looking for the next adventure. I was curious, loved science and studied
+                pre-med in college. The day after my final, I packed what little I had and
+                took my chances in the Rocky Mountains while learning to snowboard. My first job 
+                was automating drug discovery research and building AI-enabled data analysis apps.
+                I was immediately hooked and<strong>ALL IN on tech</strong>.
               </p>
 
               <p>
@@ -127,14 +127,14 @@ export default function AboutPage() {
                 by an opportunity to start something new. I've always been drawn to the
                 creativity in building from scratch and have grown to appreciate how messy
                 transformation can be. The one common theme? <strong>Technology</strong>. From lab
-                robotics to streaming to vibe coding, I always find ways to ride the wave of innovation.
+                robotics to streaming to AI, I always find ways to ride the wave of innovation.
               </p>
 
               <p>
                 I've been lucky to have a career as a transformative leader and accomplished
                 executive for both startups and Fortune 50 companies in Boulder, San Francisco,
                 Los Angeles and New York. My roles flowed from biotech to big tech to big
-                entertainment and now I am helping build a community of like minded, AI enthusiasts
+                entertainment and now I am helping shape a community of like minded, AI enthusiasts
                 who share the same values and deep curiosities as I do.
               </p>
 
@@ -161,14 +161,13 @@ export default function AboutPage() {
             </h2>
 
             <p className="text-xl text-white/80 mb-6">
-              I am a powerhouse AI leader with a background in product development,
-              partnerships, and business operations. I deliver future-ready strategies
-              that empower tech organizations to lead and win.
+              I am a powerhouse executive and AI leader with a background in product
+              development, partnerships, and business operations.
             </p>
 
             <p className="text-lg text-white/60 mb-10">
               I am relentlessly optimistic and a trusted advisor to the C-suite, founders,
-              boards, investors and fellow rock star executives.
+              boards, investors and fellow rock star builders.
             </p>
 
             <div className="inline-block bg-deep-yellow/20 border border-deep-yellow/40 rounded-xl px-8 py-4">

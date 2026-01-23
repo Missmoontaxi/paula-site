@@ -171,7 +171,7 @@ export default function Home() {
                 An Unconventional Path
               </h2>
               <p className="text-slate-dark/70 mb-6">
-                From automating drug discovery in Boulder to Imagineering in LA to leading Disney+ partnerships in New York, my career has been defined by following curiosity and embracing transformation.
+                From automating drug discovery in Boulder to leading Disney+ partnerships in New York, my career has been defined by following curiosity and embracing transformation.
               </p>
               <p className="text-slate-dark/70 mb-8">
                 Today, I'm building community at The AI Collective while advising founders and executives on AI strategy.

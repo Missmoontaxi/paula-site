@@ -60,7 +60,7 @@ export default function ContactPage() {
               Connect
             </h1>
             <p className="text-xl text-slate-dark/70 max-w-2xl mx-auto">
-              I'm always looking for new and exciting opportunities. Let's chat!
+              I'm always looking for new and exciting opportunities. Let's connect!
             </p>
           </motion.div>
         </div>
