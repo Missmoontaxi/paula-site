@@ -275,9 +275,9 @@ export default function Home() {
               Let's Work Together
             </h2>
             <p className="text-white/70 mb-8 max-w-2xl mx-auto">
-              I'm always looking for new connections and exciting opportunities.
+              I'm always looking for new connections and exciting innovation.
               Whether you're building something new or transforming something established,
-              I'd love to hear from you.
+              let's connect.
             </p>
             <Link
               href="/contact"

@@ -28,20 +28,20 @@ const socialLinks = [
   {
     icon: Instagram,
     label: 'Instagram',
-    href: 'https://instagram.com/paulamcmahon',
-    username: '@paulamcmahon',
+    href: 'https://www.instagram.com/moontaxi?igsh=dTJ3dGpmem5zNm02&utm_source=qr',
+    username: '@moontaxi',
   },
   {
     icon: Linkedin,
     label: 'LinkedIn',
-    href: 'https://linkedin.com/in/paulamcmahon',
+    href: 'https://www.linkedin.com/in/paulamcmahon/',
     username: 'Paula McMahon',
   },
   {
     icon: Twitter,
     label: 'X / Twitter',
-    href: 'https://x.com/paulamcmahon',
-    username: '@paulamcmahon',
+    href: 'https://x.com/missmoontaxi?s=21&t=7AB5d2wTLsrs1UcZNFw65w',
+    username: '@missmoontaxi',
   },
 ]
 

@@ -22,12 +22,12 @@ const skillCategories = [
   {
     icon: Building2,
     title: 'Executive Leader',
-    description: 'Transformative leader known for driving innovation to steer business in media, tech, science and AI.',
+    description: 'Transformative leader known for driving innovation to steer global business in media, tech, science and AI.',
   },
   {
     icon: Zap,
     title: 'Technology',
-    description: 'Digital native career with global product portfolio, AI community builder of engineers, investors and operators.',
+    description: 'Digital native career with global product portfolio, AI builder and advisor to engineers, investors and operators.',
   },
   {
     icon: FlaskConical,
