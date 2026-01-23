@@ -117,9 +117,9 @@ export default function AboutPage() {
                 I am the youngest of five, grew up active in the Midwest playing sports and
                 always looking for the next adventure. I was curious, loved science and studied
                 pre-med in college. The day after my final, I packed what little I had and
-                took my chances in the Rocky Mountains while learning to snowboard. My first job 
+                took my chances learning to snowboard in the Rocky Mountains. My first job 
                 was automating drug discovery research and building AI-enabled data analysis apps.
-                I was immediately hooked and<strong>ALL IN on tech</strong>.
+                I was immediately hooked and <strong>ALL IN on tech</strong>.
               </p>
 
               <p>
