@@ -7,8 +7,8 @@ import { ArrowLeft, ExternalLink } from 'lucide-react'
 
 // Making Things photos - add your image filenames here
 const photos = [
-  { src: '/images/IMG_3569.jpg', caption: 'The Vineyard' },
-  { src: '/images/IMG_3691.jpg', caption: 'Wine Fermenting' },
+  { src: '/images/making-things/IMG_3569.jpg', caption: 'The Vineyard' },
+  { src: '/images/making-things/IMG_3691.jpg', caption: 'Wine Fermenting' },
 ]
 
 const projects = [

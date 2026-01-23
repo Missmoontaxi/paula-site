@@ -7,12 +7,12 @@ import { ArrowLeft } from 'lucide-react'
 
 // Snowboarding photos - add your image filenames here
 const photos = [
-  { src: '/images/IMG_4293.jpg', caption: 'Ski Slopes' },
-  { src: '/images/IMG_4161.jpg', caption: 'Grand Tetons' },
-  { src: '/images/IMG_3591.jpg', caption: 'Teton Range' },
-  { src: '/images/IMG_4187.jpg', caption: 'Snowy Trail' },
-  { src: '/images/IMG_4100.jpg', caption: 'Winter Morning' },
-  { src: '/images/IMG_4087.jpg', caption: 'Frosty Trees' },
+  { src: '/images/snowboarding/IMG_4293.jpg', caption: 'Ski Slopes' },
+  { src: '/images/snowboarding/IMG_4161.jpg', caption: 'Grand Tetons' },
+  { src: '/images/snowboarding/IMG_3591.jpg', caption: 'Teton Range' },
+  { src: '/images/snowboarding/IMG_4187.jpg', caption: 'Snowy Trail' },
+  { src: '/images/snowboarding/IMG_4100.jpg', caption: 'Winter Morning' },
+  { src: '/images/snowboarding/IMG_4087.jpg', caption: 'Frosty Trees' },
 ]
 
 export default function SnowboardingGallery() {

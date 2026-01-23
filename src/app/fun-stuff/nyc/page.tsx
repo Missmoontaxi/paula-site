@@ -7,13 +7,13 @@ import { ArrowLeft } from 'lucide-react'
 
 // NYC photos - add your image filenames here
 const photos = [
-  { src: '/images/NYC1.jpg', caption: 'New York City' },
-  { src: '/images/NYC2.jpg', caption: 'New York City' },
-  { src: '/images/NYC3.jpg', caption: 'New York City' },
-  { src: '/images/NYC4.jpg', caption: 'New York City' },
-  { src: '/images/NYC5.jpg', caption: 'New York City' },
-  { src: '/images/NYC6.jpg', caption: 'New York City' },
-  { src: '/images/NYC7.jpg', caption: 'New York City' },
+  { src: '/images/nyc/NYC1.jpg', caption: 'New York City' },
+  { src: '/images/nyc/NYC2.jpg', caption: 'New York City' },
+  { src: '/images/nyc/NYC3.jpg', caption: 'New York City' },
+  { src: '/images/nyc/NYC4.jpg', caption: 'New York City' },
+  { src: '/images/nyc/NYC5.jpg', caption: 'New York City' },
+  { src: '/images/nyc/NYC6.jpg', caption: 'New York City' },
+  { src: '/images/nyc/NYC7.jpg', caption: 'New York City' },
 ]
 
 export default function NYCGallery() {
