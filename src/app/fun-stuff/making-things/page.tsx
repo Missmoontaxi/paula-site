@@ -9,6 +9,13 @@ import { ArrowLeft, ExternalLink } from 'lucide-react'
 const photos = [
   { src: '/images/making-things/IMG_3569.jpg', caption: 'The Vineyard' },
   { src: '/images/making-things/IMG_3691.jpg', caption: 'Wine Fermenting' },
+  { src: '/images/making-things/AA67C.jpg', caption: 'Cabernet on the Vine' },
+  { src: '/images/making-things/D17D6.jpg', caption: 'Harvest Day' },
+  { src: '/images/making-things/IMG_1851.jpg', caption: 'Chardonnay Harvest' },
+  { src: '/images/making-things/IMG_1963.jpg', caption: 'Willamette Valley Vineyard' },
+  { src: '/images/making-things/IMG_2306.jpg', caption: 'Cabernet Cluster' },
+  { src: '/images/making-things/wine1.jpg', caption: 'Crush Day' },
+  { src: '/images/making-things/wine2.jpg', caption: 'Canyon Vineyard' },
 ]
 
 const projects = [
