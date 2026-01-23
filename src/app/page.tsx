@@ -222,10 +222,10 @@ export default function Home() {
           {/* Preview Grid */}
           <div className="grid md:grid-cols-4 gap-4">
             {[
-              { title: 'Travel', image: '/images/IMG_5731.jpg', href: '/fun-stuff/travel' },
-              { title: 'Snowboarding', image: '/images/IMG_4293.jpg', href: '/fun-stuff/snowboarding' },
-              { title: 'Making Things', image: '/images/IMG_3569.jpg', href: '/fun-stuff/making-things' },
-              { title: 'NYC', image: '/images/NYC1.jpg', href: '/fun-stuff/nyc' },
+              { title: 'Travel', image: '/images/travel/IMG_5731.jpg', href: '/fun-stuff/travel' },
+              { title: 'Snowboarding', image: '/images/snowboarding/IMG_4293.jpg', href: '/fun-stuff/snowboarding' },
+              { title: 'Making Things', image: '/images/making-things/IMG_3569.jpg', href: '/fun-stuff/making-things' },
+              { title: 'NYC', image: '/images/nyc/NYC1.jpg', href: '/fun-stuff/nyc' },
             ].map((item, index) => (
               <Link key={item.title} href={item.href}>
                 <motion.div
