@@ -13,6 +13,9 @@ const photos = [
   { src: '/images/snowboarding/IMG_4187.jpg', caption: 'Snowy Trail' },
   { src: '/images/snowboarding/IMG_4100.jpg', caption: 'Winter Morning' },
   { src: '/images/snowboarding/IMG_4087.jpg', caption: 'Frosty Trees' },
+  { src: '/images/snowboarding/IMG_1359.jpg', caption: 'Teton Sunrise' },
+  { src: '/images/snowboarding/IMG_1630.jpg', caption: 'Teton Sunset' },
+  { src: '/images/snowboarding/IMG_1696_2.jpg', caption: 'Alpenglow on the Tetons' },
 ]
 
 export default function SnowboardingGallery() {

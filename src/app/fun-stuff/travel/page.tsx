@@ -28,6 +28,9 @@ const photos = [
   { src: '/images/travel/IMG_5996.jpg', caption: 'Resort' },
   { src: '/images/travel/IMG_4607.jpg', caption: 'Sedona Sunset' },
   { src: '/images/travel/IMG_4617.jpg', caption: 'Sedona' },
+  { src: '/images/travel/IMG_0098.jpg', caption: 'Coastal Bluffs' },
+  { src: '/images/travel/IMG_1340.jpg', caption: 'Sunset Beach' },
+  { src: '/images/travel/IMG_4255.jpg', caption: 'Surfer at Sunset' },
 ]
 
 export default function TravelGallery() {
