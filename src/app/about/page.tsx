@@ -118,7 +118,7 @@ export default function AboutPage() {
                 always looking for the next adventure. I was curious, loved science and studied
                 pre-med in college. The day after my final, I packed what little I had and
                 took my chances learning to snowboard in the Rocky Mountains. My first job 
-                was automating drug discovery research and building AI-enabled data analysis apps.
+                was automating drug discovery research and building AI-enabled data analysis apps. 
                 I was immediately hooked and <strong>ALL IN on tech</strong>.
               </p>
 
@@ -162,12 +162,9 @@ export default function AboutPage() {
 
             <p className="text-xl text-white/80 mb-6">
               I am a powerhouse executive and AI leader with a background in product
-              development, partnerships, and business operations.
-            </p>
-
-            <p className="text-lg text-white/60 mb-10">
-              I am relentlessly optimistic and a trusted advisor to the C-suite, founders,
-              boards, investors and fellow rock star builders.
+              development, partnerships, and business operations. I am relentlessly
+              optimistic and trusted advisor to the C-suite, founcers, investors,
+              boards, and fellow rock star builders.
             </p>
 
             <div className="inline-block bg-deep-yellow/20 border border-deep-yellow/40 rounded-xl px-8 py-4">
