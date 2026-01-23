@@ -88,9 +88,9 @@ export default function Home() {
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="hidden md:block"
+              className="order-last md:order-none mt-8 md:mt-0"
             >
-              <div className="relative w-80 h-96 mx-auto">
+              <div className="relative w-64 h-80 md:w-80 md:h-96 mx-auto">
                 <div className="absolute inset-0 bg-teal-accent/20 rounded-2xl transform rotate-3" />
                 <Image
                   src="https://static.wixstatic.com/media/e0d75d_ee0785572e6e4c498deac51919fda54d~mv2.jpeg/v1/fill/w_600,h_720,al_c,q_85/e0d75d_ee0785572e6e4c498deac51919fda54d~mv2.jpeg"
