@@ -19,13 +19,15 @@ const photos = [
 ]
 
 const projects = [
-  {
-    title: 'MemeMe',
-    description: 'A vibecoded meme discovery app. Come on in and hang out for a bit!',
-    url: 'https://www.welcometomemetown.com',
-    tags: ['Vibecoding', 'AI', 'Fun'],
-  },
-]
+  const projects = [
+    {
+      title: 'Welcome to MemeTown',
+      description: 'A vibecoded meme discovery app. Come on in and hang out for a bit! Best 3 minutes of your day.',
+      url: 'https://www.welcometomemetown.com',
+      image: '/images/making-things/memetown.jpg',
+      tags: ['Vibecoding', 'AI', 'Fun'],
+    },
+  ]
 
 export default function MakingThingsGallery() {
   return (
@@ -95,7 +97,7 @@ export default function MakingThingsGallery() {
             Vibecoding Projects
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {projects.map((project, index) => (
+          {projects.map((project, index) => (
               <motion.a
                 key={project.title}
                 href={project.url}
@@ -105,26 +107,38 @@ export default function MakingThingsGallery() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all"
+                className="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all"
               >
-                <div className="flex items-start justify-between mb-4">
-                  <h3 className="font-serif text-xl font-bold text-slate-dark group-hover:text-teal-accent transition-colors">
-                    {project.title}
-                  </h3>
-                  <ExternalLink size={18} className="text-slate-dark/40 group-hover:text-teal-accent transition-colors" />
-                </div>
-                <p className="text-slate-dark/70 text-sm mb-4">
-                  {project.description}
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  {project.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="px-3 py-1 bg-teal-accent/10 text-teal-accent text-xs font-medium rounded-full"
-                    >
-                      {tag}
-                    </span>
-                  ))}
+                {project.image && (
+                  <div className="relative h-40 w-full">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                )}
+                <div className="p-6">
+                  <div className="flex items-start justify-between mb-4">
+                    <h3 className="font-serif text-xl font-bold text-slate-dark group-hover:text-teal-accent transition-colors">
+                      {project.title}
+                    </h3>
+                    <ExternalLink size={18} className="text-slate-dark/40 group-hover:text-teal-accent transition-colors" />
+                  </div>
+                  <p className="text-slate-dark/70 text-sm mb-4">
+                    {project.description}
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {project.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="px-3 py-1 bg-teal-accent/10 text-teal-accent text-xs font-medium rounded-full"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </motion.a>
             ))}
