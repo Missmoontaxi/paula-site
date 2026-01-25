@@ -18,6 +18,7 @@ const photos = [
   { src: '/images/travel/IMG_5613.jpg', caption: 'Ireland' },
   { src: '/images/travel/IMG_6064.jpg', caption: 'Beach' },
   { src: '/images/travel/IMG_6084.jpg', caption: 'Colombia' },
+  { src: '/images/travel/greece.jpg', caption: 'Santorini at Dusk' },
   { src: '/images/travel/IMG_6086.jpg', caption: 'Street Art' },
   { src: '/images/travel/IMG_6087.jpg', caption: 'Umbrella Street' },
   { src: '/images/travel/IMG_6091.jpg', caption: 'Colorful Street' },

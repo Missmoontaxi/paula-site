@@ -17,6 +17,7 @@ const photos = [
   { src: '/images/snowboarding/ski3.JPG', caption: 'Fresh Tracks' },
   { src: '/images/snowboarding/ski4.JPG', caption: 'Mammoth Powder' },
   { src: '/images/snowboarding/ski5.jpg', caption: 'Vail Back Bowls' },
+  { src: '/images/snowboarding/tahoe.jpg', caption: 'Tahoe Powder Day' },
   { src: '/images/snowboarding/ski6.jpg', caption: 'Jackson Hole Cliffs' },
   { src: '/images/snowboarding/ski7.jpg', caption: 'Corbet\'s Cabin' },
   { src: '/images/snowboarding/ski8.jpg', caption: 'Après-Ski with a View' },
