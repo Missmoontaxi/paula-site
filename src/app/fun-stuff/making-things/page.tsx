@@ -18,7 +18,6 @@ const photos = [
   { src: '/images/making-things/wine2.jpg', caption: 'Canyon Vineyard' },
 ]
 
-const projects = [
   const projects = [
     {
       title: 'Welcome to MemeTown',
@@ -152,7 +151,7 @@ export default function MakingThingsGallery() {
               className="bg-cream border-2 border-dashed border-slate-dark/20 rounded-xl p-6 flex items-center justify-center"
             >
               <p className="text-slate-dark/50 text-center">
-                More projects coming soon...
+                More projects coming soon
               </p>
             </motion.div>
           </div>
