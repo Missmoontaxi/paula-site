@@ -153,7 +153,7 @@ export default function Home() {
               className="relative h-[400px] rounded-2xl overflow-hidden"
             >
               <Image
-                src="https://static.wixstatic.com/media/e0d75d_74c20e7d748945219625bd1924ed4acb~mv2.png/v1/fill/w_800,h_600,al_c,q_90/e0d75d_74c20e7d748945219625bd1924ed4acb~mv2.png"
+                src="/images/Path.png"
                 alt="Abstract technology visualization"
                 fill
                 className="object-cover"
