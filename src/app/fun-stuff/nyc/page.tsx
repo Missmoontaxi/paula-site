@@ -14,6 +14,8 @@ const photos = [
   { src: '/images/nyc/NYC5.jpg', caption: 'New York City' },
   { src: '/images/nyc/NYC6.jpg', caption: 'New York City' },
   { src: '/images/nyc/NYC7.jpg', caption: 'New York City' },
+  { src: '/images/nyc/nyc10.jpg', caption: 'Tribute in Light' },
+  { src: '/images/nyc/nyc11.jpg', caption: 'Spring in the Botanic Garden' },
 ]
 
 export default function NYCGallery() {
