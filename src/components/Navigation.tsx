@@ -40,7 +40,7 @@ export default function Navigation() {
               scrolled ? 'text-slate-dark' : 'text-white'
             }`}
           >
-            Paula McMahon
+            Welcome
           </Link>
 
           {/* Desktop Navigation */}
