@@ -131,16 +131,16 @@ export default function AboutPage() {
               </p>
 
               <p>
-                I've been lucky to have a career as a transformative leader and accomplished
-                executive for both startups and Fortune 50 companies in Boulder, San Francisco,
+                I've been lucky to have a career as a digital native and transformative leader
+                for both startups and Fortune 50 companies in Boulder, San Francisco,
                 Los Angeles and New York. My roles flowed from biotech to big tech to big
-                entertainment and now I am helping shape a community of like minded, AI enthusiasts
-                who share the same values and deep curiosities as I do.
+                entertainment and now I am helping shape a community of like minded, AI leaders
+                and builders who share the same values and deep curiosities as I do.
               </p>
 
               <p>
                 I am always seeking new connections, the latest AI innovation, and best examples
-                of breakthrough technologies.
+                of breakthrough technologies. Let's connect!
               </p>
             </div>
           </motion.div>
@@ -162,7 +162,7 @@ export default function AboutPage() {
 
             <p className="text-xl text-white/80 mb-6">
               I am a powerhouse executive and AI leader with a background in product
-              development, partnerships, and business operations. I am relentlessly
+              development, partnerships, and business operations. I am calm, relentlessly
               optimistic and trusted advisor to the C-suite, founcers, investors,
               boards, and fellow rock star builders.
             </p>
