@@ -12,7 +12,7 @@ const photos = [
   { src: '/images/nyc/NYC3.jpg', caption: 'New York City' },
   { src: '/images/nyc/NYC4.jpg', caption: 'New York City' },
   { src: '/images/nyc/NYC5.jpg', caption: 'New York City' },
-  { src: '/images/nyc/NYC6.jpg', caption: 'New York City' },
+  { src: '/images/nyc/nyc13.jpg', caption: 'Carroll Gardens in Bloom' },
   { src: '/images/nyc/NYC7.jpg', caption: 'New York City' },
   { src: '/images/nyc/nyc10.jpg', caption: 'Tribute in Light' },
   { src: '/images/nyc/nyc12.jpg', caption: 'Brooklyn Snow Day' },
