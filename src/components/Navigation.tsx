@@ -38,7 +38,7 @@ export default function Navigation() {
             href="/"
             className="text-xl font-serif font-semibold text-slate-dark hover:text-teal-accent transition-colors"
           >
-            Welcome
+            Paula McMahon
           </Link>
 
           {/* Desktop Navigation */}
