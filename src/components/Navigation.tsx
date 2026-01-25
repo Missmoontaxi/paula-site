@@ -36,9 +36,7 @@ export default function Navigation() {
           {/* Logo / Name */}
           <Link
             href="/"
-            className={`text-xl font-serif font-semibold hover:text-teal-accent transition-colors ${
-              scrolled ? 'text-slate-dark' : 'text-white'
-            }`}
+            className="text-xl font-serif font-semibold text-slate-dark hover:text-teal-accent transition-colors"
           >
             Welcome
           </Link>
@@ -49,9 +47,7 @@ export default function Navigation() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className={`text-sm hover:text-teal-accent transition-colors relative group ${
-                    scrolled ? 'text-slate-dark/80' : 'text-white/80'
-                  }`}
+                  className="text-sm text-slate-dark/80 hover:text-teal-accent transition-colors relative group"
                 >
                   {link.label}
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-teal-accent transition-all duration-300 group-hover:w-full" />
@@ -63,7 +59,7 @@ export default function Navigation() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className={`md:hidden p-2 ${scrolled ? 'text-slate-dark' : 'text-white'}`}
+            className="md:hidden p-2 text-slate-dark"
             aria-label="Toggle menu"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
