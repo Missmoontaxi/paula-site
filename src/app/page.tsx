@@ -2,7 +2,8 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
+import { motion, useScroll, useTransform } from 'framer-motion'
+import { useRef } from 'react'
 import { ArrowRight, Sparkles } from 'lucide-react'
 
 const skills = [
@@ -21,21 +22,28 @@ const fadeInUp = {
 }
 
 export default function Home() {
+  const heroRef = useRef(null)
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ['start start', 'end start']
+  })
+  const backgroundY = useTransform(scrollYProgress, [0, 1], ['0%', '30%'])
+
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-[60vh] md:min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0 z-0">
+      <section ref={heroRef} className="relative min-h-[60vh] md:min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Background Image with Parallax */}
+        <motion.div className="absolute inset-0 z-0" style={{ y: backgroundY }}>
           <Image
             src="https://static.wixstatic.com/media/e0d75d_26b782877f3c48adb85ad537fe35f47c~mv2.jpg/v1/fill/w_1920,h_1080,al_c,q_85/e0d75d_26b782877f3c48adb85ad537fe35f47c~mv2.jpg"
             alt="Mountain landscape with aurora"
             fill
-            className="object-cover"
+            className="object-cover scale-110"
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-b from-slate-dark/30 via-transparent to-cream" />
-        </div>
+        </motion.div>
 
         {/* Hero Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-6 pt-24 pb-32">
@@ -131,7 +139,8 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
-                className="bg-white rounded-xl p-4 text-center shadow-sm hover:shadow-md transition-shadow"
+                whileHover={{ y: -4, scale: 1.02 }}
+                className="bg-white rounded-xl p-4 text-center shadow-sm hover:shadow-lg hover:bg-teal-accent/5 transition-all duration-300 cursor-default"
               >
                 <span className="text-sm font-medium text-slate-dark">{skill}</span>
               </motion.div>
@@ -180,12 +189,14 @@ export default function Home() {
               {/* Company Logos / Names */}
               <div className="flex flex-wrap gap-4 mb-8">
                 {['AI Collective', 'Disney', 'Yahoo!', 'Cytokinetics'].map((company) => (
-                  <span
+                  <motion.span
                     key={company}
-                    className="px-4 py-2 bg-cream rounded-full text-sm font-medium text-slate-dark/80"
+                    whileHover={{ scale: 1.05, y: -2 }}
+                    transition={{ type: 'spring', stiffness: 400, damping: 17 }}
+                    className="px-4 py-2 bg-cream rounded-full text-sm font-medium text-slate-dark/80 hover:bg-teal-accent/10 hover:text-teal-accent transition-colors duration-300 cursor-default"
                   >
                     {company}
-                  </span>
+                  </motion.span>
                 ))}
               </div>
 

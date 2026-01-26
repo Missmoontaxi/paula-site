@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { Menu, X } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 
@@ -16,6 +17,12 @@ const navLinks = [
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const pathname = usePathname()
+
+  const isActive = (href: string) => {
+    if (href === '/') return pathname === '/'
+    return pathname.startsWith(href)
+  }
 
   useEffect(() => {
     const handleScroll = () => {
@@ -47,10 +54,18 @@ export default function Navigation() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="text-sm text-slate-dark/80 hover:text-teal-accent transition-colors relative group"
+                  className={`text-sm transition-colors relative group ${
+                    isActive(link.href)
+                      ? 'text-teal-accent font-medium'
+                      : 'text-slate-dark/80 hover:text-teal-accent'
+                  }`}
                 >
                   {link.label}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-teal-accent transition-all duration-300 group-hover:w-full" />
+                  <span
+                    className={`absolute -bottom-1 left-0 h-0.5 bg-teal-accent transition-all duration-300 ${
+                      isActive(link.href) ? 'w-full' : 'w-0 group-hover:w-full'
+                    }`}
+                  />
                 </Link>
               </li>
             ))}
@@ -81,7 +96,11 @@ export default function Navigation() {
                     <Link
                       href={link.href}
                       onClick={() => setIsOpen(false)}
-                      className="block text-lg text-slate-dark/80 hover:text-teal-accent transition-colors"
+                      className={`block text-lg transition-colors ${
+                        isActive(link.href)
+                          ? 'text-teal-accent font-medium'
+                          : 'text-slate-dark/80 hover:text-teal-accent'
+                      }`}
                     >
                       {link.label}
                     </Link>
