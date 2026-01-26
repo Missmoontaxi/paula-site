@@ -50,7 +50,7 @@ export default function SnowboardingGallery() {
               To Ride is to Live
             </h1>
             <p className="text-xl text-slate-dark/70 max-w-2xl">
-              Snowboarding adventures in the mountains
+              Snowboarding adventures
             </p>
           </motion.div>
         </div>
