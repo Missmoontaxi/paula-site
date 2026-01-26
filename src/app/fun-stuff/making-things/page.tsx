@@ -13,7 +13,7 @@ const photos = [
   { src: '/images/making-things/D17D6.jpg', caption: 'Harvest Day' },
   { src: '/images/making-things/agua1.jpg', caption: 'Ripe Chardonnay' },
   { src: '/images/making-things/aqua2.jpg', caption: 'Bunch of Joy' },
-  { src: '/images/making-things/barre;.jpg', caption: 'Harvest Season' },
+  { src: '/images/making-things/barrel.jpg', caption: 'Harvest Season' },
   { src: '/images/making-things/grapes.jpg', caption: 'More Harvest' },
   { src: '/images/making-things/IMG_1851.jpg', caption: 'Chardonnay Harvest' },
   { src: '/images/making-things/IMG_1963.jpg', caption: 'Willamette Valley Vineyard' },
