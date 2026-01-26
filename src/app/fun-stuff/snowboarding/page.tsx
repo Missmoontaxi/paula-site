@@ -7,12 +7,13 @@ import { ArrowLeft } from 'lucide-react'
 
 // Snowboarding photos - add your image filenames here
 const photos = [
-  { src: '/images/snowboarding/IMG_4293.jpg', caption: 'Ski Slopes' },
+  { src: '/images/snowboarding/IMG_4293.jpg', caption: 'Snow King' },
   { src: '/images/snowboarding/IMG_3591.jpg', caption: 'Teton Range' },
   { src: '/images/snowboarding/IMG_4087.jpg', caption: 'Frosty Trees' },
   { src: '/images/snowboarding/IMG_1359.jpg', caption: 'Teton Sunrise' },
+  { src: '/images/snowboarding/Mammoth.jpg', caption: 'Mammoth Bluebird' },
   { src: '/images/snowboarding/IMG_1630.jpg', caption: 'Teton Sunset' },
-  { src: '/images/snowboarding/ski.JPG', caption: 'Jackson Hole Backcountry' },
+  { src: '/images/snowboarding/ski.JPG', caption: 'Jackson Hole' },
   { src: '/images/snowboarding/ski2.JPG', caption: 'Matterhorn Bluebird Day' },
   { src: '/images/snowboarding/ski3.JPG', caption: 'Fresh Tracks' },
   { src: '/images/snowboarding/ski4.JPG', caption: 'Mammoth Powder' },
