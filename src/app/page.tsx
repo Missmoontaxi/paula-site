@@ -224,7 +224,7 @@ export default function Home() {
             {[
               { title: 'Travel', image: '/images/travel/IMG_5762.jpg', href: '/fun-stuff/travel' },
               { title: 'Snowboarding', image: '/images/snowboarding/ski11.jpg', href: '/fun-stuff/snowboarding' },
-              { title: 'Making Things', image: '/images/making-things/IMG_3569.jpg', href: '/fun-stuff/making-things' },
+              { title: 'Making Things', image: '/images/making-things/aqua2.jpg', href: '/fun-stuff/making-things' },
               { title: 'NYC', image: '/images/nyc/NYC1.jpg', href: '/fun-stuff/nyc' },
             ].map((item, index) => (
               <Link key={item.title} href={item.href}>
