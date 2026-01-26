@@ -16,7 +16,6 @@ const photos = [
   { src: '/images/making-things/IMG_1963.jpg', caption: 'Willamette Valley Vineyard' },
   { src: '/images/making-things/IMG_2306.jpg', caption: 'Tannat Cluster' },
   { src: '/images/making-things/wine1.jpg', caption: 'Crush Day' },
-  { src: '/images/making-things/wine2.jpg', caption: 'Canyon Vineyard' },
 ]
 
   const projects = [
