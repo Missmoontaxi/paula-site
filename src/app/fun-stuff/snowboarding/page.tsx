@@ -24,8 +24,8 @@ const photos = [
   { src: '/images/snowboarding/ski8.jpg', caption: 'Après-Ski with a View' },
   { src: '/images/snowboarding/ski9.jpg', caption: 'Matterhorn Up Close' },
   { src: '/images/snowboarding/ski10.jpg', caption: 'Powder Day Chairlift' },
-  { src: '/images/snowboarding/ski11.jpg', caption: 'Tree Run' },
-  { src: '/images/snowboarding/ski12.JPG', caption: 'Jackson Hole Tram' },
+  { src: '/images/snowboarding/ski11.jpg', caption: 'Tram Life' },
+  { src: '/images/snowboarding/ski12.JPG', caption: 'Trees at Mammoth' },
 ]
 
 export default function SnowboardingGallery() {
