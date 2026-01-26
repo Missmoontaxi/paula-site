@@ -5,8 +5,8 @@ import Link from 'next/link'
 import { motion } from 'framer-motion'
 
 const categories = [
-  { title: 'Travel', image: '/images/travel/IMG_5731.jpg', href: '/fun-stuff/travel' },
-  { title: 'Snowboarding', image: '/images/snowboarding/IMG_4293.jpg', href: '/fun-stuff/snowboarding' },
+  { title: 'Travel', image: '/images/travel/IMG_5762.jpg', href: '/fun-stuff/travel' },
+  { title: 'Snowboarding', image: '/images/snowboarding/ski11.jpg', href: '/fun-stuff/snowboarding' },
   { title: 'Making Things', image: '/images/making-things/IMG_3569.jpg', href: '/fun-stuff/making-things' },
   { title: 'NYC', image: '/images/nyc/NYC1.jpg', href: '/fun-stuff/nyc' },
 ]
@@ -26,7 +26,7 @@ export default function FunStuff() {
               Fun Stuff
             </h1>
             <p className="text-xl text-slate-dark/70 max-w-2xl">
-              Life beyond work — travel, snowboarding, winemaking, and city adventures.
+              Life beyond work for travel, snowboarding, winemaking, and city fun.
             </p>
           </motion.div>
         </div>
