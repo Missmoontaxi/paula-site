@@ -11,7 +11,7 @@ const photos = [
   { src: '/images/making-things/IMG_3691.jpg', caption: 'Wine Fermenting' },
   { src: '/images/making-things/AA67C.jpg', caption: 'Cabernet on the Vine' },
   { src: '/images/making-things/D17D6.jpg', caption: 'Harvest Day' },
-  { src: '/images/making-things/agua1.jpg', caption: 'Ripe Chardonnay' },
+  { src: '/images/making-things/white.jpg', caption: 'Ripe Chardonnay' },
   { src: '/images/making-things/aqua2.jpg', caption: 'Bunch of Joy' },
   { src: '/images/making-things/barrel.jpg', caption: 'Harvest Season' },
   { src: '/images/making-things/grapes.jpg', caption: 'More Harvest' },
