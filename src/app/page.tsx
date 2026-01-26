@@ -281,7 +281,7 @@ export default function Home() {
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 bg-navy-denim hover:bg-navy-denim/90 text-white px-8 py-4 rounded-lg transition-colors font-medium text-lg"
+              className="inline-flex items-center gap-2 bg-teal-accent hover:bg-teal-light text-white px-8 py-4 rounded-lg transition-colors font-medium text-lg"
             >
               Get in Touch
               <ArrowRight size={20} />
