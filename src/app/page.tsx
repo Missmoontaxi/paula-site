@@ -11,7 +11,7 @@ const skills = [
   'Product Management',
   'Digital Transformation',
   'Strategic Partnerships',
-  'Innovation',
+  'AI Innovation',
 ]
 
 const fadeInUp = {
@@ -212,7 +212,7 @@ export default function Home() {
             className="text-center mb-12"
           >
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-slate-dark mb-4">
-              Live Curious. Stay Bold.
+              Stay Curious. Be Bold.
             </h2>
             <p className="text-slate-dark/70 max-w-2xl mx-auto">
               When I'm not building the future of tech, you'll find me on the slopes, vibe coding, making wine, or exploring the world.
