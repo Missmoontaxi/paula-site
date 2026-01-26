@@ -119,7 +119,7 @@ export default function AboutPage() {
                 pre-med in college. The day after my final, I packed what little I had and
                 took my chances learning to snowboard in the Rocky Mountains. My first job 
                 was automating drug discovery research and building AI-enabled data analysis apps. 
-                I was immediately hooked and <strong>ALL IN on Tech</strong>
+                I was immediately hooked and <strong>ALL IN on Tech.</strong>
               </p>
 
               <p>
@@ -134,7 +134,7 @@ export default function AboutPage() {
                 I've been lucky to have a career as a digital native and transformative leader
                 for both startups and Fortune 50 companies in Boulder, San Francisco,
                 Los Angeles and New York. My roles flowed from biotech to big tech to big
-                entertainment and am now helping shape a community of like minded AI leaders
+                entertainment and now I'm shaping a community of like minded AI leaders
                 and builders who share the same values and deep curiosities as I do.
               </p>
 
