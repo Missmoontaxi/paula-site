@@ -14,12 +14,12 @@ const highlights = [
   {
     icon: Briefcase,
     title: 'Tech & Business Duality',
-    description: 'From biotech startups to Fortune 50 companies',
+    description: 'From biotech startups to Fortune 50 media companies',
   },
   {
     icon: Heart,
     title: 'AI Enthusiast',
-    description: 'Building community and driving innovation in AI',
+    description: 'Driving innovation and building community in AI',
   },
 ]
 
@@ -70,8 +70,8 @@ export default function AboutPage() {
                 Glad you came through.
               </p>
               <p className="text-slate-dark/70 mb-8">
-                This is my little corner of the digital universe. Read more about me below
-                and hang out as long as you'd like.
+                This is my little corner of the digital universe, hang out as long
+                as you'd like.
               </p>
 
               {/* Highlights */}
@@ -134,7 +134,7 @@ export default function AboutPage() {
                 I've been lucky to have a career as a digital native and transformative leader
                 for both startups and Fortune 50 companies in Boulder, San Francisco,
                 Los Angeles and New York. My roles flowed from biotech to big tech to big
-                entertainment and now I am helping shape a community of like minded, AI leaders
+                entertainment and am now helping shape a community of like minded AI leaders
                 and builders who share the same values and deep curiosities as I do.
               </p>
 
