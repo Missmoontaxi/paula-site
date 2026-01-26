@@ -40,7 +40,7 @@ export default function AboutPage() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="relative h-72 rounded-xl overflow-hidden">
                   <Image
-                    src="https://static.wixstatic.com/media/e0d75d_fe603ab8806c4a52b2544e88375f1a00~mv2.jpeg/v1/fill/w_500,h_600,al_c,q_80/e0d75d_fe603ab8806c4a52b2544e88375f1a00~mv2.jpeg"
+                    src="/images/PMboard.png"
                     alt="Paula snowboarding"
                     fill
                     className="object-cover"
@@ -48,7 +48,7 @@ export default function AboutPage() {
                 </div>
                 <div className="relative h-72 rounded-xl overflow-hidden mt-8">
                   <Image
-                    src="https://static.wixstatic.com/media/e0d75d_e67552174f0549f08b06c2d4d0ae127c~mv2.jpg/v1/fill/w_500,h_600,al_c,q_80/e0d75d_e67552174f0549f08b06c2d4d0ae127c~mv2.jpg"
+                    src="/images/PMHeadshot.jpg"
                     alt="Paula headshot"
                     fill
                     className="object-cover object-top"

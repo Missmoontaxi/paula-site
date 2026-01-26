@@ -36,7 +36,7 @@ export default function Home() {
         {/* Background Image with Parallax */}
         <motion.div className="absolute inset-0 z-0" style={{ y: backgroundY }}>
           <Image
-            src="https://static.wixstatic.com/media/e0d75d_26b782877f3c48adb85ad537fe35f47c~mv2.jpg/v1/fill/w_1920,h_1080,al_c,q_85/e0d75d_26b782877f3c48adb85ad537fe35f47c~mv2.jpg"
+            src="/images/heroPM.jpg"
             alt="Mountain landscape with aurora"
             fill
             className="object-cover scale-110"
@@ -101,7 +101,7 @@ export default function Home() {
               <div className="relative w-64 h-80 md:w-80 md:h-96 mx-auto">
                 <div className="absolute inset-0 bg-teal-accent/20 rounded-2xl transform rotate-3" />
                 <Image
-                  src="https://static.wixstatic.com/media/e0d75d_ee0785572e6e4c498deac51919fda54d~mv2.jpeg/v1/fill/w_600,h_720,al_c,q_85/e0d75d_ee0785572e6e4c498deac51919fda54d~mv2.jpeg"
+                  src="/images/HeroHeadsot.png"
                   alt="Paula McMahon"
                   fill
                   className="object-cover rounded-2xl shadow-2xl"
