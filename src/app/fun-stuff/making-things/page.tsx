@@ -31,7 +31,7 @@ const photos = [
     },
     {
       title: 'Moontaxi Lab',
-      description: 'Moontaxi Lab. A place to learn. Building a team to help navigate the complexities of AI strategy and digital transformation.',
+      description: 'A place to learn. Building a team to help navigate AI strategy and digital transformation.',
       url: 'https://www.moontaxilab.com',
       image: '/images/making-things/moontaxilab.png',
       tags: ['Vibecoding', 'AI', 'Next.js'],
