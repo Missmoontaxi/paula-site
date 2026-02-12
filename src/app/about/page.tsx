@@ -47,6 +47,7 @@ export default function AboutPage() {
                 <motion.div
                   className="relative h-72 rounded-xl overflow-hidden"
                   whileHover={{ scale: 1.03, rotate: -1 }}
+                  whileTap={{ scale: 1.03, rotate: -1 }}
                   transition={{ type: 'spring', stiffness: 300, damping: 20 }}
                 >
                   <Image
@@ -59,6 +60,7 @@ export default function AboutPage() {
                 <motion.div
                   className="relative h-72 rounded-xl overflow-hidden mt-8"
                   whileHover={{ scale: 1.03, rotate: 1 }}
+                  whileTap={{ scale: 1.03, rotate: 1 }}
                   transition={{ type: 'spring', stiffness: 300, damping: 20 }}
                 >
                   <Image
