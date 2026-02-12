@@ -10,16 +10,22 @@ const highlights = [
     icon: MapPin,
     title: 'Based in NYC',
     description: 'Living and building in New York City\'s vibrant AI and tech scene',
+    iconColor: 'text-rose-500',
+    iconBg: 'bg-rose-50',
   },
   {
     icon: Briefcase,
     title: 'Tech & Business Duality',
     description: 'From biotech startups to Fortune 50 media companies',
+    iconColor: 'text-indigo-500',
+    iconBg: 'bg-indigo-50',
   },
   {
     icon: Heart,
     title: 'AI Enthusiast',
     description: 'Driving innovation and building community in AI',
+    iconColor: 'text-amber-500',
+    iconBg: 'bg-amber-50',
   },
 ]
 
@@ -38,22 +44,30 @@ export default function AboutPage() {
               className="relative"
             >
               <div className="grid grid-cols-2 gap-4">
-                <div className="relative h-72 rounded-xl overflow-hidden">
+                <motion.div
+                  className="relative h-72 rounded-xl overflow-hidden"
+                  whileHover={{ scale: 1.03, rotate: -1 }}
+                  transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+                >
                   <Image
                     src="/images/PMboard.png"
                     alt="Paula snowboarding"
                     fill
                     className="object-cover"
                   />
-                </div>
-                <div className="relative h-72 rounded-xl overflow-hidden mt-8">
+                </motion.div>
+                <motion.div
+                  className="relative h-72 rounded-xl overflow-hidden mt-8"
+                  whileHover={{ scale: 1.03, rotate: 1 }}
+                  transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+                >
                   <Image
                     src="/images/PMHeadshot.jpg"
                     alt="Paula headshot"
                     fill
                     className="object-cover object-top"
                   />
-                </div>
+                </motion.div>
               </div>
             </motion.div>
 
@@ -82,11 +96,16 @@ export default function AboutPage() {
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
-                    className="flex items-start gap-4"
+                    whileHover={{ x: 4 }}
+                    className="flex items-start gap-4 cursor-default"
                   >
-                    <div className="w-10 h-10 bg-teal-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <item.icon size={20} className="text-teal-accent" />
-                    </div>
+                    <motion.div
+                      className={`w-10 h-10 ${item.iconBg} rounded-lg flex items-center justify-center flex-shrink-0`}
+                      whileHover={{ scale: 1.15, rotate: [0, -8, 8, 0] }}
+                      transition={{ type: 'spring', stiffness: 400, damping: 17 }}
+                    >
+                      <item.icon size={20} className={item.iconColor} />
+                    </motion.div>
                     <div>
                       <h3 className="font-medium text-slate-dark">{item.title}</h3>
                       <p className="text-sm text-slate-dark/60">{item.description}</p>
@@ -188,16 +207,16 @@ export default function AboutPage() {
               className="bg-white rounded-2xl p-8 shadow-sm"
             >
               <h3 className="font-serif text-2xl font-bold text-slate-dark mb-4">
-                See My Experience
+                See the Fun Stuff
               </h3>
               <p className="text-slate-dark/70 mb-6">
-                Explore my career journey from biotech to Disney to building AI communities.
+                Live Curious. Stay Bold. Check out my adventures in travel, snowboarding, and winemaking.
               </p>
               <Link
-                href="/experience"
+                href="/fun-stuff"
                 className="inline-flex items-center gap-2 text-teal-accent hover:text-teal-light font-medium transition-colors"
               >
-                View Experience
+                Explore Fun Stuff
                 <ArrowRight size={18} />
               </Link>
             </motion.div>
@@ -210,16 +229,16 @@ export default function AboutPage() {
               className="bg-white rounded-2xl p-8 shadow-sm"
             >
               <h3 className="font-serif text-2xl font-bold text-slate-dark mb-4">
-                See the Fun Stuff
+                See My Experience
               </h3>
               <p className="text-slate-dark/70 mb-6">
-                Live Curious. Stay Bold. Check out my adventures in travel, snowboarding, and winemaking.
+                Explore my career journey from biotech to Disney to building AI communities.
               </p>
               <Link
-                href="/fun-stuff"
+                href="/experience"
                 className="inline-flex items-center gap-2 text-teal-accent hover:text-teal-light font-medium transition-colors"
               >
-                Explore Fun Stuff
+                View Experience
                 <ArrowRight size={18} />
               </Link>
             </motion.div>

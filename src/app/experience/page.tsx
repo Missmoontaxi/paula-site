@@ -76,26 +76,8 @@ const experience = [
 export default function ExperiencePage() {
   return (
     <>
-      {/* Hero */}
-      <section className="pt-32 pb-16 bg-cream">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <h1 className="font-serif text-4xl md:text-5xl font-bold text-slate-dark mb-6">
-              Career
-            </h1>
-            <p className="text-xl text-slate-dark/70 max-w-2xl mx-auto">
-              An Unconventional Path
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
       {/* Skills Section */}
-      <section className="py-16 bg-white">
+      <section className="pt-32 pb-16 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
