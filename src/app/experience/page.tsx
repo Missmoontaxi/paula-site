@@ -3,41 +3,34 @@
 import { motion } from 'framer-motion'
 import { Building2, Zap, FlaskConical, Users } from 'lucide-react'
 
-const skills = [
-  'Executive Leadership',
-  'Artificial Intelligence',
-  'Strategic Planning & Execution',
-  'Innovation / Emerging Technology',
-  'Partnerships',
-  'Product Management',
-  'Business Development',
-  'Operational Excellence',
-  'Digital Transformation',
-  'Data Analysis',
-  'Dynamic Change Management',
-  'P&L Financial Management',
-]
-
 const skillCategories = [
   {
     icon: Building2,
     title: 'Executive Leader',
     description: 'Transformative leader known for driving innovation to steer global business in media, tech, science and AI.',
+    iconColor: 'text-indigo-500',
+    iconBg: 'bg-indigo-50',
   },
   {
     icon: Zap,
     title: 'Technology',
     description: 'Digital native career with global product portfolio, AI builder and advisor to engineers, investors and operators.',
+    iconColor: 'text-amber-500',
+    iconBg: 'bg-amber-50',
   },
   {
     icon: FlaskConical,
     title: 'Science',
     description: 'Pioneered bioinformatics and robotics to accelerate Research and Development in preclinical drug discovery.',
+    iconColor: 'text-emerald-500',
+    iconBg: 'bg-emerald-50',
   },
   {
     icon: Users,
     title: 'Partnerships',
     description: 'Expert at crafting strategic relationships to deliver innovative solutions propelled by the latest technology.',
+    iconColor: 'text-rose-500',
+    iconBg: 'bg-rose-50',
   },
 ]
 
@@ -112,24 +105,8 @@ export default function ExperiencePage() {
             className="mb-12"
           >
             <h2 className="font-serif text-3xl font-bold text-slate-dark mb-8 text-center">
-              Professional Skills
+              What I Bring
             </h2>
-
-            {/* Skills Tags */}
-            <div className="flex flex-wrap justify-center gap-3 mb-12">
-              {skills.map((skill, index) => (
-                <motion.span
-                  key={skill}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.3, delay: index * 0.05 }}
-                  className="px-4 py-2 bg-cream rounded-full text-sm font-medium text-slate-dark/80"
-                >
-                  {skill}
-                </motion.span>
-              ))}
-            </div>
 
             {/* Skill Categories */}
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -142,8 +119,8 @@ export default function ExperiencePage() {
                   transition={{ duration: 0.4, delay: index * 0.1 }}
                   className="bg-cream rounded-xl p-6"
                 >
-                  <div className="w-12 h-12 bg-teal-accent/10 rounded-lg flex items-center justify-center mb-4">
-                    <category.icon size={24} className="text-teal-accent" />
+                  <div className={`w-12 h-12 ${category.iconBg} rounded-lg flex items-center justify-center mb-4`}>
+                    <category.icon size={24} className={category.iconColor} />
                   </div>
                   <h3 className="font-semibold text-slate-dark mb-2">{category.title}</h3>
                   <p className="text-sm text-slate-dark/70">{category.description}</p>
