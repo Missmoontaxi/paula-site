@@ -6,13 +6,69 @@ import { motion, useScroll, useTransform } from 'framer-motion'
 import { useRef } from 'react'
 import { ArrowRight, Sparkles } from 'lucide-react'
 
-const skills = [
+const skillsRow1 = [
   'Executive Leadership',
   'Artificial Intelligence',
   'Product Management',
   'Digital Transformation',
   'Strategic Partnerships',
-  'AI Innovation',
+  'Innovation',
+  'Business Development',
+  'Data & Analytics',
+]
+
+const skillsRow2 = [
+  'Data & Analytics',
+  'Innovation',
+  'Strategic Partnerships',
+  'Executive Leadership',
+  'Business Development',
+  'Product Management',
+  'Digital Transformation',
+  'Artificial Intelligence',
+]
+
+const companies = [
+  {
+    name: 'AI Collective',
+    logo: '/images/logos/ai-collective.png',
+    url: 'https://www.theaicollective.com/',
+    width: 140,
+    height: 48,
+    className: 'h-10 w-auto',
+  },
+  {
+    name: 'Disney',
+    logo: '/images/logos/disney.png',
+    url: 'https://www.disney.com/',
+    width: 120,
+    height: 40,
+    className: 'h-10 w-auto',
+  },
+  {
+    name: 'Yahoo!',
+    logo: '/images/logos/yahoo.png',
+    url: 'https://www.yahoo.com/',
+    width: 120,
+    height: 40,
+    className: 'h-10 w-auto',
+  },
+  {
+    name: 'Cytokinetics',
+    logo: '/images/logos/cytokinetics.png',
+    url: 'https://www.cytokinetics.com/',
+    width: 140,
+    height: 60,
+    className: 'h-12 w-auto',
+  },
+  {
+    name: 'Bristol Myers Squibb',
+    logo: '/images/logos/bms.png',
+    url: 'https://www.bms.com/',
+    width: 160,
+    height: 40,
+    className: 'h-8 w-auto',
+  },
 ]
 
 const fadeInUp = {
@@ -112,7 +168,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Skills Snapshot */}
+      {/* Skills Marquee */}
       <section className="py-20 bg-cream">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
@@ -130,22 +186,36 @@ export default function Home() {
             </p>
           </motion.div>
 
-          {/* Skills Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            {skills.map((skill, index) => (
-              <motion.div
-                key={skill}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                whileHover={{ y: -4, scale: 1.02 }}
-                className="bg-white rounded-xl p-4 text-center shadow-sm hover:shadow-lg hover:bg-teal-accent/5 transition-all duration-300 cursor-default"
-              >
-                <span className="text-sm font-medium text-slate-dark">{skill}</span>
-              </motion.div>
-            ))}
-          </div>
+          {/* Marquee Ticker */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="marquee-container space-y-4 overflow-hidden"
+          >
+            {/* Row 1 - scrolls left */}
+            <div className="flex animate-marquee-left whitespace-nowrap">
+              {[...skillsRow1, ...skillsRow1].map((skill, index) => (
+                <span key={`r1-${index}`} className="inline-flex items-center mx-3 flex-shrink-0">
+                  <span className="px-5 py-2.5 bg-white rounded-full text-sm font-medium text-slate-dark shadow-sm hover:shadow-lg hover:bg-sky-100 hover:text-sky-900 hover:font-semibold transition-all duration-300">
+                    {skill}
+                  </span>
+                </span>
+              ))}
+            </div>
+
+            {/* Row 2 - scrolls right */}
+            <div className="flex animate-marquee-right whitespace-nowrap">
+              {[...skillsRow2, ...skillsRow2].map((skill, index) => (
+                <span key={`r2-${index}`} className="inline-flex items-center mx-3 flex-shrink-0">
+                  <span className="px-5 py-2.5 bg-white rounded-full text-sm font-medium text-slate-dark shadow-sm hover:shadow-lg hover:bg-sky-100 hover:text-sky-900 hover:font-semibold transition-all duration-300">
+                    {skill}
+                  </span>
+                </span>
+              ))}
+            </div>
+          </motion.div>
         </div>
       </section>
 
@@ -186,17 +256,30 @@ export default function Home() {
                 Today, I'm building community at The AI Collective while advising founders and executives on AI strategy.
               </p>
 
-              {/* Company Logos / Names */}
-              <div className="flex flex-wrap gap-4 mb-8">
-                {['AI Collective', 'Disney', 'Yahoo!', 'Cytokinetics'].map((company) => (
-                  <motion.span
-                    key={company}
-                    whileHover={{ scale: 1.05, y: -2 }}
-                    transition={{ type: 'spring', stiffness: 400, damping: 17 }}
-                    className="px-4 py-2 bg-cream rounded-full text-sm font-medium text-slate-dark/80 hover:bg-teal-accent/10 hover:text-teal-accent transition-colors duration-300 cursor-default"
+              {/* Company Logos */}
+              <div className="flex flex-wrap items-center gap-8 mb-8">
+                {companies.map((company, index) => (
+                  <motion.a
+                    key={company.name}
+                    href={company.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: index * 0.1 }}
+                    whileHover={{ scale: 1.1, y: -4 }}
+                    className="opacity-80 hover:opacity-100 transition-all duration-300"
+                    title={company.name}
                   >
-                    {company}
-                  </motion.span>
+                    <Image
+                      src={company.logo}
+                      alt={company.name}
+                      width={company.width}
+                      height={company.height}
+                      className={`${company.className} object-contain`}
+                    />
+                  </motion.a>
                 ))}
               </div>
 

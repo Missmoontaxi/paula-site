@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import { Mail, Phone, Instagram, Linkedin, Twitter, MapPin } from 'lucide-react'
+import { Mail, Calendar, Instagram, Linkedin, Twitter, MapPin } from 'lucide-react'
 
 const contactMethods = [
   {
@@ -12,10 +12,10 @@ const contactMethods = [
     href: 'mailto:hello@paulamcmahon.com',
   },
   {
-    icon: Phone,
-    label: 'Phone',
-    value: '415-713-5356',
-    href: 'tel:+14157135356',
+    icon: Calendar,
+    label: 'Book Time',
+    value: 'Schedule 30 min',
+    href: 'https://calendly.com/hello-paulamcmahon/30min',
   },
   {
     icon: MapPin,
@@ -31,18 +31,24 @@ const socialLinks = [
     label: 'Instagram',
     href: 'https://www.instagram.com/moontaxi?igsh=dTJ3dGpmem5zNm02&utm_source=qr',
     username: '@moontaxi',
+    color: 'text-pink-500',
+    bgHover: 'group-hover:bg-pink-50',
   },
   {
     icon: Linkedin,
     label: 'LinkedIn',
     href: 'https://www.linkedin.com/in/paulamcmahon/',
     username: 'Paula McMahon',
+    color: 'text-blue-600',
+    bgHover: 'group-hover:bg-blue-50',
   },
   {
     icon: Twitter,
     label: 'X / Twitter',
     href: 'https://x.com/missmoontaxi?s=21&t=7AB5d2wTLsrs1UcZNFw65w',
     username: '@missmoontaxi',
+    color: 'text-slate-900',
+    bgHover: 'group-hover:bg-slate-100',
   },
 ]
 
@@ -147,7 +153,7 @@ export default function ContactPage() {
                   transition={{ duration: 0.4, delay: index * 0.1 }}
                 >
                   <motion.div
-                    className="w-12 h-12 bg-slate-dark/5 group-hover:bg-teal-accent/10 rounded-full flex items-center justify-center transition-colors"
+                    className={`w-12 h-12 bg-slate-dark/5 ${social.bgHover} rounded-full flex items-center justify-center transition-colors`}
                     whileHover={{
                       scale: 1.2,
                       rotate: [0, -10, 10, -10, 0],
@@ -157,9 +163,9 @@ export default function ContactPage() {
                       rotate: { duration: 0.5 }
                     }}
                   >
-                    <social.icon size={24} className="text-slate-dark/60 group-hover:text-teal-accent transition-colors" />
+                    <social.icon size={24} className={`${social.color} transition-colors`} />
                   </motion.div>
-                  <span className="text-sm text-slate-dark/70 group-hover:text-teal-accent transition-colors">
+                  <span className="text-sm text-slate-dark/70 group-hover:text-slate-dark transition-colors">
                     {social.username}
                   </span>
                 </motion.a>
