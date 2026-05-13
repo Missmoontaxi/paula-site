@@ -30,6 +30,14 @@ const skillsRow2 = [
 
 const companies = [
   {
+    name: 'Eve',
+    logo: '/images/logos/eve.png',
+    url: 'https://www.helloeve.co/',
+    width: 100,
+    height: 40,
+    className: 'h-10 w-auto',
+  },
+  {
     name: 'AI Collective',
     logo: '/images/logos/ai-collective.png',
     url: 'https://www.theaicollective.com/',
@@ -253,33 +261,40 @@ export default function Home() {
                 From automating drug discovery in Boulder to leading Disney+ partnerships in New York, my career has been defined by following curiosity and embracing transformation.
               </p>
               <p className="text-slate-dark/70 mb-8">
-                Today, I'm building community at The AI Collective while advising founders and executives on AI strategy.
+                Today, I'm leading partnerships and ecosystem at Eve, building community at The AI Collective, and advising on AI strategy.
               </p>
 
               {/* Company Logos */}
-              <div className="flex flex-wrap items-center gap-8 mb-8">
-                {companies.map((company, index) => (
-                  <motion.a
-                    key={company.name}
-                    href={company.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.4, delay: index * 0.1 }}
-                    whileHover={{ scale: 1.1, y: -4 }}
-                    className="opacity-80 hover:opacity-100 transition-all duration-300"
-                    title={company.name}
-                  >
-                    <Image
-                      src={company.logo}
-                      alt={company.name}
-                      width={company.width}
-                      height={company.height}
-                      className={`${company.className} object-contain`}
-                    />
-                  </motion.a>
+              <div className="space-y-6 mb-8">
+                {[
+                  companies.filter((c) => !['Cytokinetics', 'Bristol Myers Squibb'].includes(c.name)),
+                  companies.filter((c) => ['Cytokinetics', 'Bristol Myers Squibb'].includes(c.name)),
+                ].map((row, rowIndex) => (
+                  <div key={rowIndex} className="flex flex-wrap items-center gap-8">
+                    {row.map((company, index) => (
+                      <motion.a
+                        key={company.name}
+                        href={company.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        initial={{ opacity: 0, y: 10 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.4, delay: index * 0.1 }}
+                        whileHover={{ scale: 1.1, y: -4 }}
+                        className="opacity-80 hover:opacity-100 transition-all duration-300"
+                        title={company.name}
+                      >
+                        <Image
+                          src={company.logo}
+                          alt={company.name}
+                          width={company.width}
+                          height={company.height}
+                          className={`${company.className} object-contain`}
+                        />
+                      </motion.a>
+                    ))}
+                  </div>
                 ))}
               </div>
 

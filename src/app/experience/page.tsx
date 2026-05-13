@@ -36,10 +36,15 @@ const skillCategories = [
 
 const experience = [
   {
+    company: 'Eve',
+    role: 'Partnerships & Ecosystem',
+    description: 'Building collaborative programs that create value for both our community and ecosystem partners. Focused on turning high-trust relationships into scalable growth opportunities.',
+    current: true,
+  },
+  {
     company: 'The AI Collective',
     role: 'Head of Operations',
     description: 'Driving strategy and execution for integrated operations across the global AI Collective community and NYC Chapter, scaling the team while upholding the Collective\'s values in New York City\'s vibrant tech culture.',
-    current: true,
   },
   {
     company: 'The Walt Disney Studios',
