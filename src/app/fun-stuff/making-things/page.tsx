@@ -110,7 +110,7 @@ export default function MakingThingsGallery() {
       <section className="py-12 bg-cream">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="font-serif text-2xl font-bold text-slate-dark mb-6">
-            Vibecoding Projects
+            Projects
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
