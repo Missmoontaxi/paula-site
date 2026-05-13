@@ -134,7 +134,7 @@ export default function Home() {
               </h1>
 
               <p className="text-lg md:text-xl text-white/90 mb-8 max-w-lg drop-shadow">
-                Transformative leader driving innovation in media, tech, science and AI.
+                AI leader driving innovation in startups, media, tech, and science.
                 Based in New York City.
               </p>
 
