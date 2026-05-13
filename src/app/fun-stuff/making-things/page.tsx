@@ -36,6 +36,13 @@ const photos = [
       image: '/images/making-things/moontaxilab.png',
       tags: ['Vibecoding', 'AI', 'Next.js'],
     },
+    {
+      title: 'Events',
+      description: 'Digital homes for IRL events. Creating spaces to learn, engage and be part of a community beyond the event.',
+      url: 'https://imagination-layer.moontaxilab.com/',
+      image: '/images/making-things/events.png',
+      tags: ['Vibecoding', 'Events', 'Community'],
+    },
   ]
 
 export default function MakingThingsGallery() {
@@ -151,19 +158,6 @@ export default function MakingThingsGallery() {
                 </div>
               </motion.a>
             ))}
-
-            {/* Add More Card */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="bg-cream border-2 border-dashed border-slate-dark/20 rounded-xl p-6 flex items-center justify-center"
-            >
-              <p className="text-slate-dark/50 text-center">
-                More projects coming soon
-              </p>
-            </motion.div>
           </div>
         </div>
       </section>
