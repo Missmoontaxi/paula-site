@@ -126,7 +126,7 @@ export default function Home() {
                 className="inline-flex items-center gap-2 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full text-sm text-teal-accent mb-6"
               >
                 <Sparkles size={16} />
-                <span>AI Enthusiast & Leader</span>
+                <span>AI Executive and Transformative Leader</span>
               </motion.div>
 
               <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 drop-shadow-lg">
@@ -145,12 +145,6 @@ export default function Home() {
                 >
                   Learn More
                   <ArrowRight size={18} />
-                </Link>
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center justify-center gap-2 bg-white/90 hover:bg-white text-slate-dark px-6 py-3 rounded-lg transition-colors font-medium"
-                >
-                  Get in Touch
                 </Link>
               </div>
             </motion.div>
