@@ -215,7 +215,7 @@ export default function ContactPage() {
             </h2>
             <p className="text-white/70 mb-8 max-w-2xl mx-auto leading-relaxed">
               Whether you&apos;re building something new, transforming something established,
-              or just want to connect about AI or tacos, I&apos;d love to connect.
+              or just want to chat about AI or tacos, I&apos;d love to connect.
             </p>
             <a
               href="mailto:hello@paulamcmahon.com"
