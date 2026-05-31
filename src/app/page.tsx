@@ -2,391 +2,318 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { motion, useScroll, useTransform } from 'framer-motion'
-import { useRef } from 'react'
-import { ArrowRight, Sparkles } from 'lucide-react'
+import { motion } from 'framer-motion'
+import { ArrowRight, ArrowUpRight, MapPin } from 'lucide-react'
 
-const skillsRow1 = [
-  'Executive Leadership',
-  'Artificial Intelligence',
-  'Product Management',
-  'Digital Transformation',
-  'Strategic Partnerships',
-  'Innovation',
-  'Business Development',
-  'Data & Analytics',
-]
+const fadeInUp = {
+  initial: { opacity: 0, y: 24 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true },
+  transition: { duration: 0.6 },
+}
 
-const skillsRow2 = [
-  'Data & Analytics',
-  'Innovation',
-  'Strategic Partnerships',
-  'Executive Leadership',
-  'Business Development',
-  'Product Management',
-  'Digital Transformation',
-  'Artificial Intelligence',
+const arc = [
+  {
+    num: '01',
+    title: 'The Science Years',
+    where: 'Boulder · San Francisco',
+    body: 'Automated drug discovery. Built AI tools for biotech before anyone was calling it AI. Found out that if you make something work in a lab, it can work everywhere.',
+  },
+  {
+    num: '02',
+    title: 'The Big Company Years',
+    where: 'Los Angeles · New York',
+    body: "Scaled Yahoo Media's news network. Launched Disney+ to 150M+ subs. Built innovation programs at Imagineering. Learned how to make large, complicated systems move fast.",
+  },
+  {
+    num: '03',
+    title: 'The Builder Years',
+    where: 'New York · Everywhere',
+    body: 'Grew The AI Collective from 25K to 250K+. Now building partnerships and ecosystem at Eve and running Moontaxi Lab. Shipping things myself. Still riding the wave.',
+  },
 ]
 
 const companies = [
+  { name: 'Eve', logo: '/images/logos/eve.png', url: 'https://www.helloeve.co/', className: 'h-8 w-auto' },
+  { name: 'AI Collective', logo: '/images/logos/ai-collective.png', url: 'https://www.theaicollective.com/', className: 'h-8 w-auto' },
+  { name: 'Disney', logo: '/images/logos/disney.png', url: 'https://www.disney.com/', className: 'h-8 w-auto' },
+  { name: 'Yahoo!', logo: '/images/logos/yahoo.png', url: 'https://www.yahoo.com/', className: 'h-8 w-auto' },
+  { name: 'Cytokinetics', logo: '/images/logos/cytokinetics-transparent.png', url: 'https://www.cytokinetics.com/', className: 'h-10 w-auto' },
+  { name: 'Bristol Myers Squibb', logo: '/images/logos/bms.png', url: 'https://www.bms.com/', className: 'h-7 w-auto' },
+]
+
+const now = [
   {
-    name: 'Eve',
-    logo: '/images/logos/eve.png',
-    url: 'https://www.helloeve.co/',
-    width: 100,
-    height: 40,
-    className: 'h-10 w-auto',
+    idx: '01',
+    title: 'Eve, the Executive Voice Engine',
+    href: 'https://www.helloeve.co',
+    desc: 'Partnership strategy, scaling operations, sales enablement, and building the ambassador program. Turning a high-trust community into a growth engine.',
   },
   {
-    name: 'AI Collective',
-    logo: '/images/logos/ai-collective.png',
-    url: 'https://www.theaicollective.com/',
-    width: 140,
-    height: 48,
-    className: 'h-10 w-auto',
+    idx: '02',
+    title: 'Moontaxi Lab',
+    href: 'https://www.moontaxilab.com',
+    desc: "My advisory practice and project space for AI strategy, GTM, scale ops, and whatever's interesting. The portfolio and the mystery.",
   },
   {
-    name: 'Disney',
-    logo: '/images/logos/disney.png',
-    url: 'https://www.disney.com/',
-    width: 120,
-    height: 40,
-    className: 'h-10 w-auto',
-  },
-  {
-    name: 'Yahoo!',
-    logo: '/images/logos/yahoo.png',
-    url: 'https://www.yahoo.com/',
-    width: 120,
-    height: 40,
-    className: 'h-10 w-auto',
-  },
-  {
-    name: 'Cytokinetics',
-    logo: '/images/logos/cytokinetics.png',
-    url: 'https://www.cytokinetics.com/',
-    width: 140,
-    height: 60,
-    className: 'h-12 w-auto',
-  },
-  {
-    name: 'Bristol Myers Squibb',
-    logo: '/images/logos/bms.png',
-    url: 'https://www.bms.com/',
-    width: 160,
-    height: 40,
-    className: 'h-8 w-auto',
+    idx: '03',
+    title: 'Teaching AI with friends',
+    href: null,
+    desc: 'Running upskilling sessions with AI curious in my network. Building agents, playbooks, and skills as code alongside people who are excited to learn and build.',
   },
 ]
 
-const fadeInUp = {
-  initial: { opacity: 0, y: 30 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.6 }
-}
+const fun = [
+  { title: 'Travel', image: '/images/travel/IMG_5762.jpg', href: '/fun-stuff/travel' },
+  { title: 'Snowboarding', image: '/images/snowboarding/ski11.jpg', href: '/fun-stuff/snowboarding' },
+  { title: 'Making Things', image: '/images/making-things/aqua2.jpg', href: '/fun-stuff/making-things' },
+  { title: 'NYC', image: '/images/nyc/NYC1.jpg', href: '/fun-stuff/nyc' },
+]
 
 export default function Home() {
-  const heroRef = useRef(null)
-  const { scrollYProgress } = useScroll({
-    target: heroRef,
-    offset: ['start start', 'end start']
-  })
-  const backgroundY = useTransform(scrollYProgress, [0, 1], ['0%', '30%'])
-
   return (
     <>
-      {/* Hero Section */}
-      <section ref={heroRef} className="relative min-h-[60vh] md:min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Background Image with Parallax */}
-        <motion.div className="absolute inset-0 z-0" style={{ y: backgroundY }}>
-          <Image
-            src="/images/heroPM.jpg"
-            alt="Mountain landscape with aurora"
-            fill
-            className="object-cover scale-110"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-slate-dark/30 via-transparent to-cream" />
-        </motion.div>
-
-        {/* Hero Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-6 pt-24 pb-32">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* Text Content */}
+      {/* ① HERO — story-led */}
+      <section className="bg-cream">
+        <div className="max-w-7xl mx-auto px-6 pt-32 pb-20 md:pt-40 md:pb-28">
+          <div className="grid md:grid-cols-[1fr_360px] gap-12 lg:gap-20 items-center">
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
+              initial={{ opacity: 0, x: -24 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center md:text-left"
+              transition={{ duration: 0.7 }}
             >
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.2 }}
-                className="inline-flex items-center gap-2 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full text-sm text-teal-accent mb-6"
-              >
-                <Sparkles size={16} />
-                <span>AI Executive and Transformative Leader</span>
-              </motion.div>
-
-              <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 drop-shadow-lg">
-                Paula<br />McMahon
-              </h1>
-
-              <p className="text-lg md:text-xl text-white/90 mb-8 max-w-lg drop-shadow">
-                AI leader driving innovation in startups, media, tech, and science.
-                Based in New York City.
+              <p className="text-lg md:text-xl text-slate-dark/60 mb-6">
+                Hi, I&apos;m Paula
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+              <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-slate-dark leading-[1.1] tracking-tight mb-6">
+                The day after my last final,<br />
+                I drove to{' '}
+                <span className="italic text-teal-accent">the Rockies.</span>
+              </h1>
+
+              <p className="text-lg text-slate-dark/70 leading-relaxed max-w-xl mb-4">
+                Everything since has been the same move. Show up somewhere exciting,
+                learn fast and build something new.
+              </p>
+
+              <p className="text-sm text-slate-dark/50 leading-relaxed max-w-xl mb-9">
+                Currently: partnership strategy at{' '}
+                <a href="https://www.helloeve.co" target="_blank" rel="noopener noreferrer" className="text-teal-accent border-b border-teal-accent/30 hover:border-teal-accent transition-colors">Eve</a>,
+                advisory work through{' '}
+                <a href="https://www.moontaxilab.com" target="_blank" rel="noopener noreferrer" className="text-teal-accent border-b border-teal-accent/30 hover:border-teal-accent transition-colors">Moontaxi Lab</a>,
+                and teaching AI to anyone curious enough to ask.
+              </p>
+
+              <div className="flex flex-wrap gap-3">
                 <Link
                   href="/about"
-                  className="inline-flex items-center justify-center gap-2 bg-navy-denim hover:bg-navy-denim/90 text-white px-6 py-3 rounded-lg transition-colors font-medium"
+                  className="inline-flex items-center gap-2 bg-teal-accent hover:bg-teal-light text-white px-6 py-3 rounded-lg font-medium transition-colors"
                 >
-                  Learn More
+                  My story
                   <ArrowRight size={18} />
                 </Link>
+                <a
+                  href="https://www.moontaxilab.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 border border-slate-dark/20 hover:border-slate-dark/50 text-slate-dark px-6 py-3 rounded-lg font-medium transition-colors"
+                >
+                  See the work
+                  <ArrowRight size={18} />
+                </a>
               </div>
             </motion.div>
 
-            {/* Headshot */}
+            {/* Portrait */}
             <motion.div
-              initial={{ opacity: 0, x: 30 }}
+              initial={{ opacity: 0, x: 24 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="order-last md:order-none mt-8 md:mt-0"
+              transition={{ duration: 0.7, delay: 0.15 }}
+              className="relative mx-auto w-72 md:w-full max-w-[360px]"
             >
-              <div className="relative w-64 h-80 md:w-80 md:h-96 mx-auto">
-                <div className="absolute inset-0 bg-teal-accent/20 rounded-2xl transform rotate-3" />
+              <div className="absolute inset-0 bg-teal-accent/15 rounded-2xl rotate-3" />
+              <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl border border-warm-gray">
                 <Image
                   src="/images/HeroHeadsot.png"
                   alt="Paula McMahon"
                   fill
-                  className="object-cover rounded-2xl shadow-2xl"
+                  priority
+                  sizes="(max-width: 768px) 288px, 360px"
+                  className="object-cover"
                 />
               </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Skills Marquee */}
-      <section className="py-20 bg-cream">
-        <div className="max-w-7xl mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12"
-          >
-            <h2 className="font-serif text-3xl md:text-4xl font-bold text-slate-dark mb-4">
-              What I Do
-            </h2>
-            <p className="text-slate-dark/70 max-w-2xl mx-auto">
-              Transformative leader and systems thinker building teams that turn vision into reality. Digital Native with experience spanning biotech to big tech to AI.
-            </p>
-          </motion.div>
-
-          {/* Marquee Ticker */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="marquee-container space-y-4 overflow-hidden"
-          >
-            {/* Row 1 - scrolls left */}
-            <div className="flex animate-marquee-left whitespace-nowrap">
-              {[...skillsRow1, ...skillsRow1].map((skill, index) => (
-                <span key={`r1-${index}`} className="inline-flex items-center mx-3 flex-shrink-0">
-                  <span className="px-5 py-2.5 bg-white rounded-full text-sm font-medium text-slate-dark shadow-sm hover:shadow-lg hover:bg-sky-100 hover:text-sky-900 hover:font-semibold transition-all duration-300">
-                    {skill}
-                  </span>
-                </span>
-              ))}
-            </div>
-
-            {/* Row 2 - scrolls right */}
-            <div className="flex animate-marquee-right whitespace-nowrap">
-              {[...skillsRow2, ...skillsRow2].map((skill, index) => (
-                <span key={`r2-${index}`} className="inline-flex items-center mx-3 flex-shrink-0">
-                  <span className="px-5 py-2.5 bg-white rounded-full text-sm font-medium text-slate-dark shadow-sm hover:shadow-lg hover:bg-sky-100 hover:text-sky-900 hover:font-semibold transition-all duration-300">
-                    {skill}
-                  </span>
-                </span>
-              ))}
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Career Highlights */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* Image */}
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="relative h-[400px] rounded-2xl overflow-hidden"
-            >
-              <Image
-                src="/images/Path.png"
-                alt="Abstract technology visualization"
-                fill
-                className="object-cover"
-              />
-            </motion.div>
-
-            {/* Content */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <h2 className="font-serif text-3xl md:text-4xl font-bold text-slate-dark mb-6">
-                An Unconventional Path
-              </h2>
-              <p className="text-slate-dark/70 mb-6">
-                From automating drug discovery in Boulder to leading Disney+ partnerships in New York, my career has been defined by following curiosity and embracing transformation.
-              </p>
-              <p className="text-slate-dark/70 mb-8">
-                Today, I'm leading partnerships and ecosystem at Eve, building community at The AI Collective, and advising on AI strategy.
-              </p>
-
-              {/* Company Logos */}
-              <div className="space-y-6 mb-8">
-                {[
-                  companies.filter((c) => !['Cytokinetics', 'Bristol Myers Squibb'].includes(c.name)),
-                  companies.filter((c) => ['Cytokinetics', 'Bristol Myers Squibb'].includes(c.name)),
-                ].map((row, rowIndex) => (
-                  <div key={rowIndex} className="flex flex-wrap items-center gap-8">
-                    {row.map((company, index) => (
-                      <motion.a
-                        key={company.name}
-                        href={company.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        initial={{ opacity: 0, y: 10 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.4, delay: index * 0.1 }}
-                        whileHover={{ scale: 1.1, y: -4 }}
-                        className="opacity-80 hover:opacity-100 transition-all duration-300"
-                        title={company.name}
-                      >
-                        <Image
-                          src={company.logo}
-                          alt={company.name}
-                          width={company.width}
-                          height={company.height}
-                          className={`${company.className} object-contain`}
-                        />
-                      </motion.a>
-                    ))}
-                  </div>
-                ))}
+              <div className="absolute -bottom-4 -right-4 flex items-center gap-1.5 bg-cream border border-warm-gray rounded-lg px-3 py-2 shadow-md text-sm text-slate-dark/70">
+                <MapPin size={14} className="text-teal-accent" />
+                New York City
               </div>
-
-              <Link
-                href="/experience"
-                className="inline-flex items-center gap-2 text-teal-accent hover:text-teal-light font-medium transition-colors"
-              >
-                View Full Experience
-                <ArrowRight size={18} />
-              </Link>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Fun Stuff Teaser */}
-      <section className="py-20 bg-cream">
-        <div className="max-w-7xl mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12"
-          >
-            <h2 className="font-serif text-3xl md:text-4xl font-bold text-slate-dark mb-4">
-              Stay Curious. Be Bold.
-            </h2>
-            <p className="text-slate-dark/70 max-w-2xl mx-auto">
-              When I'm not building the future of tech, you'll find me on the slopes, vibe coding, making wine, or exploring the world.
-            </p>
-          </motion.div>
+      {/* ② THE ARC */}
+      <section className="bg-white border-t border-warm-gray">
+        <div className="grid md:grid-cols-3">
+          {arc.map((c, i) => (
+            <motion.div
+              key={c.num}
+              {...fadeInUp}
+              transition={{ duration: 0.6, delay: i * 0.1 }}
+              className="p-10 md:p-12 border-b md:border-b-0 md:border-r border-warm-gray last:border-r-0 hover:bg-cream/50 transition-colors"
+            >
+              <p className="text-xs font-semibold tracking-[0.16em] uppercase text-slate-dark/40 mb-2">
+                {c.num}
+              </p>
+              <h3 className="font-serif text-2xl font-bold text-slate-dark mb-1">{c.title}</h3>
+              <p className="text-sm text-teal-accent tracking-wide mb-4">{c.where}</p>
+              <p className="text-sm text-slate-dark/70 leading-relaxed">{c.body}</p>
+            </motion.div>
+          ))}
+        </div>
+      </section>
 
-          {/* Preview Grid */}
-          <div className="grid md:grid-cols-4 gap-4">
-            {[
-              { title: 'Travel', image: '/images/travel/IMG_5762.jpg', href: '/fun-stuff/travel' },
-              { title: 'Snowboarding', image: '/images/snowboarding/ski11.jpg', href: '/fun-stuff/snowboarding' },
-              { title: 'Making Things', image: '/images/making-things/aqua2.jpg', href: '/fun-stuff/making-things' },
-              { title: 'NYC', image: '/images/nyc/NYC1.jpg', href: '/fun-stuff/nyc' },
-            ].map((item, index) => (
+      {/* logo band — quiet credibility */}
+      <section className="bg-cream py-14 border-t border-warm-gray">
+        <div className="max-w-7xl mx-auto px-6">
+          <p className="text-center text-xs font-semibold tracking-[0.16em] uppercase text-slate-dark/40 mb-8">
+            Along the way
+          </p>
+          <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-6">
+            {companies.map((c, i) => (
+              <motion.a
+                key={c.name}
+                href={c.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                title={c.name}
+                initial={{ opacity: 0, y: 8 }}
+                whileInView={{ opacity: 0.7, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: i * 0.08 }}
+                whileHover={{ opacity: 1, scale: 1.06 }}
+                className="opacity-70"
+              >
+                <Image src={c.logo} alt={c.name} width={140} height={48} className={`${c.className} object-contain`} />
+              </motion.a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ③ RIGHT NOW */}
+      <section className="bg-white py-20 md:py-24 border-t border-warm-gray">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid md:grid-cols-[260px_1fr] gap-10 md:gap-20 items-start">
+            <motion.div {...fadeInUp}>
+              <p className="text-xs font-semibold tracking-[0.16em] uppercase text-teal-accent mb-4">
+                Right now
+              </p>
+              <h2 className="font-serif text-3xl md:text-4xl font-bold text-slate-dark leading-tight md:sticky md:top-28">
+                What I&apos;m <span className="italic text-teal-accent">up to</span>
+              </h2>
+            </motion.div>
+
+            <ul className="space-y-4">
+              {now.map((row, i) => {
+                const Card = row.href ? 'a' : 'div'
+                const linkProps = row.href
+                  ? { href: row.href, target: '_blank', rel: 'noopener noreferrer' }
+                  : {}
+                return (
+                  <motion.li
+                    key={row.idx}
+                    {...fadeInUp}
+                    transition={{ duration: 0.6, delay: i * 0.1 }}
+                  >
+                    <Card
+                      {...linkProps}
+                      className="group relative flex gap-5 rounded-xl border border-warm-gray bg-white p-6 md:p-7 overflow-hidden transition-all duration-300 hover:border-teal-accent/40 hover:shadow-[0_8px_30px_-12px_rgba(26,95,90,0.25)]"
+                    >
+                      {/* teal accent bar */}
+                      <span className="absolute left-0 top-0 h-full w-1 bg-teal-accent scale-y-0 group-hover:scale-y-100 origin-top transition-transform duration-300" />
+
+                      <span className="font-serif text-lg font-semibold text-teal-accent shrink-0 w-9 h-9 flex items-center justify-center rounded-full bg-teal-accent/10 group-hover:bg-teal-accent group-hover:text-white transition-colors duration-300">
+                        {row.idx}
+                      </span>
+
+                      <div className="flex-1">
+                        <p className="font-serif font-semibold text-lg text-slate-dark mb-1 flex items-center gap-1.5">
+                          {row.title}
+                          {row.href && (
+                            <ArrowUpRight
+                              size={17}
+                              className="text-teal-accent opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"
+                            />
+                          )}
+                        </p>
+                        <p className="text-sm text-slate-dark/70 leading-relaxed">{row.desc}</p>
+                      </div>
+                    </Card>
+                  </motion.li>
+                )
+              })}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* ④ FUN STUFF */}
+      <section className="bg-cream py-20 md:py-24 border-t border-warm-gray">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex items-end justify-between mb-10">
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-slate-dark">
+              Life, not just work.
+            </h2>
+            <Link href="/fun-stuff" className="inline-flex items-center gap-1.5 text-teal-accent hover:text-teal-light font-medium text-sm whitespace-nowrap">
+              See everything
+              <ArrowRight size={16} />
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {fun.map((item, i) => (
               <Link key={item.title} href={item.href}>
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
-                  className="group relative aspect-square rounded-xl overflow-hidden cursor-pointer"
+                  transition={{ duration: 0.4, delay: i * 0.1 }}
+                  className="group relative aspect-[4/3] rounded-xl overflow-hidden cursor-pointer border border-warm-gray"
                 >
                   <Image
                     src={item.image}
                     alt={item.title}
                     fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    sizes="(max-width: 768px) 50vw, 25vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                  <span className="absolute bottom-4 left-4 text-white font-medium">
-                    {item.title}
-                  </span>
+                  <span className="absolute bottom-4 left-4 text-white font-medium">{item.title}</span>
                 </motion.div>
               </Link>
             ))}
           </div>
-
-          <div className="text-center mt-8">
-            <Link
-              href="/fun-stuff"
-              className="inline-flex items-center gap-2 text-teal-accent hover:text-teal-light font-medium transition-colors"
-            >
-              Explore More
-              <ArrowRight size={18} />
-            </Link>
-          </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-slate-dark text-white">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="font-serif text-3xl md:text-4xl font-bold mb-6">
-              Let's Work Together
+      {/* ⑤ CTA */}
+      <section className="bg-slate-dark text-white py-20 md:py-24">
+        <div className="max-w-3xl mx-auto px-6 text-center">
+          <motion.div {...fadeInUp}>
+            <h2 className="font-serif text-3xl md:text-4xl font-bold mb-5 leading-tight">
+              Always looking for new connections<br className="hidden md:block" /> and{' '}
+              <span className="italic text-teal-light">good ideas.</span>
             </h2>
-            <p className="text-white/70 mb-8 max-w-2xl mx-auto">
-              I'm always looking for new connections and exciting innovation.
-              Whether you're building something new or transforming something established,
-              let's connect.
+            <p className="text-white/70 max-w-xl mx-auto mb-9 leading-relaxed">
+              Whether you&apos;re building something new, transforming something established,
+              or just have something interesting to say.
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 bg-teal-accent hover:bg-teal-light text-white px-8 py-4 rounded-lg transition-colors font-medium text-lg"
+              className="inline-flex items-center gap-2 bg-teal-accent hover:bg-teal-light text-white px-8 py-4 rounded-lg font-medium text-lg transition-colors"
             >
-              Get in Touch
+              Get in touch
               <ArrowRight size={20} />
             </Link>
           </motion.div>

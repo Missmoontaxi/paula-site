@@ -64,10 +64,13 @@ export default function MakingThingsGallery() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="font-serif text-4xl md:text-5xl font-bold text-slate-dark mb-4">
-              Making Things
+            <p className="text-xs font-semibold tracking-[0.16em] uppercase text-teal-accent mb-4">
+              Hands on
+            </p>
+            <h1 className="font-serif text-4xl md:text-5xl font-bold text-slate-dark leading-[1.1] tracking-tight mb-4">
+              Making things
             </h1>
-            <p className="text-xl text-slate-dark/70 max-w-2xl">
+            <p className="text-lg text-slate-dark/70 max-w-2xl leading-relaxed">
               Winemaking, vibecoding, and creative pursuits
             </p>
           </motion.div>
@@ -75,7 +78,7 @@ export default function MakingThingsGallery() {
       </section>
 
       {/* Winemaking Section */}
-      <section className="py-12 bg-white">
+      <section className="py-12 bg-white border-t border-warm-gray">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="font-serif text-2xl font-bold text-slate-dark mb-6">
             Winemaking
@@ -107,7 +110,7 @@ export default function MakingThingsGallery() {
       </section>
 
       {/* Vibecoding Section */}
-      <section className="py-12 bg-cream">
+      <section className="py-12 bg-cream border-t border-warm-gray">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="font-serif text-2xl font-bold text-slate-dark mb-6">
             Projects
@@ -123,7 +126,7 @@ export default function MakingThingsGallery() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all"
+                className="group bg-white rounded-xl overflow-hidden border border-warm-gray shadow-sm transition-all duration-300 hover:border-teal-accent/40 hover:shadow-[0_8px_30px_-12px_rgba(26,95,90,0.25)]"
               >
                 {project.image && (
                   <div className="relative h-40 w-full">

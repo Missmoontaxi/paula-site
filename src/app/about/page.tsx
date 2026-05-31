@@ -3,39 +3,55 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { ArrowRight, MapPin, Briefcase, Heart } from 'lucide-react'
+import { ArrowRight, ArrowUpRight, MapPin, Briefcase, Heart } from 'lucide-react'
+
+const fadeInUp = {
+  initial: { opacity: 0, y: 24 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true },
+  transition: { duration: 0.6 },
+}
 
 const highlights = [
   {
     icon: MapPin,
     title: 'Based in NYC',
-    description: 'Living and building in New York City\'s vibrant AI and tech scene',
-    iconColor: 'text-rose-500',
-    iconBg: 'bg-rose-50',
+    description: "Living and building in New York City's vibrant AI and tech scene",
   },
   {
     icon: Briefcase,
     title: 'Tech & Business Duality',
     description: 'From biotech startups to Fortune 50 media companies',
-    iconColor: 'text-indigo-500',
-    iconBg: 'bg-indigo-50',
   },
   {
     icon: Heart,
     title: 'AI Enthusiast',
     description: 'Driving innovation and building community in AI',
-    iconColor: 'text-amber-500',
-    iconBg: 'bg-amber-50',
+  },
+]
+
+const cards = [
+  {
+    title: 'See the fun stuff',
+    desc: 'Live curious. Stay bold. Check out my adventures in travel, snowboarding, and winemaking.',
+    cta: 'Explore fun stuff',
+    href: '/fun-stuff',
+  },
+  {
+    title: 'See my experience',
+    desc: 'Explore my career journey from biotech to Disney to building AI communities.',
+    cta: 'View experience',
+    href: '/experience',
   },
 ]
 
 export default function AboutPage() {
   return (
     <>
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-cream">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+      {/* ① HERO */}
+      <section className="bg-cream">
+        <div className="max-w-7xl mx-auto px-6 pt-32 pb-20 md:pt-40 md:pb-24">
+          <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Images */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -43,9 +59,10 @@ export default function AboutPage() {
               transition={{ duration: 0.8 }}
               className="relative"
             >
-              <div className="grid grid-cols-2 gap-4">
+              <div className="absolute -inset-4 bg-teal-accent/10 rounded-3xl rotate-2" />
+              <div className="relative grid grid-cols-2 gap-4">
                 <motion.div
-                  className="relative h-72 rounded-xl overflow-hidden"
+                  className="relative h-72 rounded-xl overflow-hidden border border-warm-gray shadow-lg"
                   whileHover={{ scale: 1.03, rotate: -1 }}
                   whileTap={{ scale: 1.03, rotate: -1 }}
                   transition={{ type: 'spring', stiffness: 300, damping: 20 }}
@@ -58,7 +75,7 @@ export default function AboutPage() {
                   />
                 </motion.div>
                 <motion.div
-                  className="relative h-72 rounded-xl overflow-hidden mt-8"
+                  className="relative h-72 rounded-xl overflow-hidden mt-8 border border-warm-gray shadow-lg"
                   whileHover={{ scale: 1.03, rotate: 1 }}
                   whileTap={{ scale: 1.03, rotate: 1 }}
                   transition={{ type: 'spring', stiffness: 300, damping: 20 }}
@@ -79,15 +96,18 @@ export default function AboutPage() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h1 className="font-serif text-4xl md:text-5xl font-bold text-slate-dark mb-6">
+              <p className="text-xs font-semibold tracking-[0.16em] uppercase text-teal-accent mb-5">
+                About
+              </p>
+              <h1 className="font-serif text-4xl md:text-5xl font-bold text-slate-dark leading-[1.1] tracking-tight mb-5">
                 Welcome
               </h1>
-              <p className="text-xl text-slate-dark/70 mb-4">
+              <p className="text-lg text-slate-dark/70 leading-relaxed mb-3">
                 Glad you came through.
               </p>
-              <p className="text-slate-dark/70 mb-8">
+              <p className="text-slate-dark/60 leading-relaxed mb-9">
                 This is my little corner of the digital universe, hang out as long
-                as you'd like.
+                as you&apos;d like.
               </p>
 
               {/* Highlights */}
@@ -102,11 +122,11 @@ export default function AboutPage() {
                     className="flex items-start gap-4 cursor-default"
                   >
                     <motion.div
-                      className={`w-10 h-10 ${item.iconBg} rounded-lg flex items-center justify-center flex-shrink-0`}
-                      whileHover={{ scale: 1.15, rotate: [0, -8, 8, 0] }}
+                      className="w-10 h-10 bg-teal-accent/10 rounded-lg flex items-center justify-center flex-shrink-0"
+                      whileHover={{ scale: 1.12, rotate: [0, -8, 8, 0] }}
                       transition={{ type: 'spring', stiffness: 400, damping: 17 }}
                     >
-                      <item.icon size={20} className={item.iconColor} />
+                      <item.icon size={20} className="text-teal-accent" />
                     </motion.div>
                     <div>
                       <h3 className="font-medium text-slate-dark">{item.title}</h3>
@@ -120,130 +140,109 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* My Story Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="font-serif text-3xl md:text-4xl font-bold text-slate-dark mb-8 text-center">
-              My Story
+      {/* ② MY STORY */}
+      <section className="bg-white border-t border-warm-gray py-20 md:py-24">
+        <div className="max-w-3xl mx-auto px-6">
+          <motion.div {...fadeInUp}>
+            <p className="text-xs font-semibold tracking-[0.16em] uppercase text-teal-accent mb-4">
+              The long way around
+            </p>
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-slate-dark leading-tight mb-10">
+              My <span className="italic text-teal-accent">story</span>
             </h2>
 
-            <div className="max-w-none text-slate-dark/80 text-center text-lg space-y-8">
+            <div className="text-slate-dark/80 text-lg leading-relaxed space-y-6">
               <p>
                 I am the youngest of five, grew up active in the Midwest playing sports and
                 always looking for the next adventure. I was curious, loved science and studied
                 pre-med in college. The day after my final, I packed what little I had and
-                took my chances learning to snowboard in the Rocky Mountains. My first job 
-                was automating drug discovery research and building AI-enabled data analysis apps. 
-                I was immediately hooked and <strong>ALL IN on Tech.</strong>
+                took my chances learning to snowboard in the Rocky Mountains. My first job
+                was automating drug discovery research and building AI-enabled data analysis apps.
+                I was immediately hooked and <strong className="text-slate-dark font-semibold">ALL IN on Tech.</strong>
               </p>
 
               <p>
                 My journey led me along an unconventional path. Each twist and turn inspired
-                by an opportunity to start something new. I've always been drawn to the
+                by an opportunity to start something new. I&apos;ve always been drawn to the
                 creativity in building from scratch and have grown to appreciate how messy
-                transformation can be. The one common theme? <strong>Technology</strong>. From lab
+                transformation can be. The one common theme? <strong className="text-slate-dark font-semibold">Technology</strong>. From lab
                 robotics to streaming to AI, I always find ways to ride the wave of innovation.
               </p>
 
               <p>
-                I've been lucky to have a career as a digital native and transformative leader
+                I&apos;ve been lucky to have a career as a digital native and transformative leader
                 for both startups and Fortune 50 companies in Boulder, San Francisco,
                 Los Angeles and New York. My roles flowed from biotech to big tech to big
-                entertainment and now I'm shaping a community of like minded AI leaders
+                entertainment and now I&apos;m shaping a community of like minded AI leaders
                 and builders who share the same values and deep curiosities as I do.
               </p>
 
               <p>
                 I am always seeking new connections, the latest AI innovation, and best examples
-                of breakthrough technologies. Let's connect!
+                of breakthrough technologies. Let&apos;s connect!
               </p>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Leadership Statement */}
-      <section className="py-20 bg-slate-dark text-white">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
+      {/* ③ LEADERSHIP */}
+      <section className="bg-slate-dark text-white py-20 md:py-24">
+        <div className="max-w-3xl mx-auto px-6 text-center">
+          <motion.div {...fadeInUp}>
+            <p className="text-xs font-semibold tracking-[0.16em] uppercase text-teal-light mb-4">
+              How I lead
+            </p>
             <h2 className="font-serif text-3xl md:text-4xl font-bold mb-8">
               Leadership
             </h2>
 
-            <p className="text-xl text-white/80 mb-6">
+            <p className="text-xl text-white/80 leading-relaxed mb-8">
               I am a powerhouse executive and AI leader with a background in product
               development, partnerships, and business operations. I am calm, relentlessly
-              optimistic and trusted advisor to the C-suite, founcers, investors,
+              optimistic and a trusted advisor to the C-suite, founders, investors,
               boards, and fellow rock star builders.
             </p>
 
-            <div className="inline-block bg-deep-yellow/20 border border-deep-yellow/40 rounded-xl px-8 py-4">
-              <p className="text-deep-yellow font-medium text-lg">
-                Let's work together!
+            <div className="inline-block bg-teal-accent/15 border border-teal-light/40 rounded-xl px-8 py-4">
+              <p className="text-teal-light font-medium text-lg">
+                Let&apos;s work together!
               </p>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-20 bg-cream">
+      {/* ④ CTA CARDS */}
+      <section className="bg-cream py-20 md:py-24 border-t border-warm-gray">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="bg-white rounded-2xl p-8 shadow-sm"
-            >
-              <h3 className="font-serif text-2xl font-bold text-slate-dark mb-4">
-                See the Fun Stuff
-              </h3>
-              <p className="text-slate-dark/70 mb-6">
-                Live Curious. Stay Bold. Check out my adventures in travel, snowboarding, and winemaking.
-              </p>
-              <Link
-                href="/fun-stuff"
-                className="inline-flex items-center gap-2 text-teal-accent hover:text-teal-light font-medium transition-colors"
+          <div className="grid md:grid-cols-2 gap-5">
+            {cards.map((card, i) => (
+              <motion.div
+                key={card.href}
+                {...fadeInUp}
+                transition={{ duration: 0.6, delay: i * 0.1 }}
               >
-                Explore Fun Stuff
-                <ArrowRight size={18} />
-              </Link>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="bg-white rounded-2xl p-8 shadow-sm"
-            >
-              <h3 className="font-serif text-2xl font-bold text-slate-dark mb-4">
-                See My Experience
-              </h3>
-              <p className="text-slate-dark/70 mb-6">
-                Explore my career journey from biotech to Disney to building AI communities.
-              </p>
-              <Link
-                href="/experience"
-                className="inline-flex items-center gap-2 text-teal-accent hover:text-teal-light font-medium transition-colors"
-              >
-                View Experience
-                <ArrowRight size={18} />
-              </Link>
-            </motion.div>
+                <Link
+                  href={card.href}
+                  className="group relative flex flex-col h-full rounded-2xl border border-warm-gray bg-white p-8 overflow-hidden transition-all duration-300 hover:border-teal-accent/40 hover:shadow-[0_8px_30px_-12px_rgba(26,95,90,0.25)]"
+                >
+                  <span className="absolute left-0 top-0 h-full w-1 bg-teal-accent scale-y-0 group-hover:scale-y-100 origin-top transition-transform duration-300" />
+                  <h3 className="font-serif text-2xl font-bold text-slate-dark mb-3 flex items-center gap-1.5">
+                    {card.title}
+                    <ArrowUpRight
+                      size={20}
+                      className="text-teal-accent opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"
+                    />
+                  </h3>
+                  <p className="text-slate-dark/70 leading-relaxed mb-6">{card.desc}</p>
+                  <span className="mt-auto inline-flex items-center gap-2 text-teal-accent group-hover:text-teal-light font-medium transition-colors">
+                    {card.cta}
+                    <ArrowRight size={18} />
+                  </span>
+                </Link>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>

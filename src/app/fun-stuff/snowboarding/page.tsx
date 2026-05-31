@@ -46,10 +46,13 @@ export default function SnowboardingGallery() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="font-serif text-4xl md:text-5xl font-bold text-slate-dark mb-4">
-              To Ride is to Live
+            <p className="text-xs font-semibold tracking-[0.16em] uppercase text-teal-accent mb-4">
+              On the mountain
+            </p>
+            <h1 className="font-serif text-4xl md:text-5xl font-bold text-slate-dark leading-[1.1] tracking-tight mb-4">
+              To ride is to live
             </h1>
-            <p className="text-xl text-slate-dark/70 max-w-2xl">
+            <p className="text-lg text-slate-dark/70 max-w-2xl leading-relaxed">
               Snowboarding adventures
             </p>
           </motion.div>
@@ -57,7 +60,7 @@ export default function SnowboardingGallery() {
       </section>
 
       {/* Photo Grid */}
-      <section className="py-12 bg-white">
+      <section className="py-12 bg-white border-t border-warm-gray">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {photos.map((photo, index) => (
