@@ -92,17 +92,9 @@ export default function Home() {
                 <span className="italic text-teal-accent">the Rockies.</span>
               </h1>
 
-              <p className="text-lg text-slate-dark/70 leading-relaxed max-w-xl mb-4">
+              <p className="text-lg text-slate-dark/70 leading-relaxed max-w-xl mb-9">
                 Everything since has been the same move. Show up somewhere exciting,
                 learn fast and build something new.
-              </p>
-
-              <p className="text-sm text-slate-dark/50 leading-relaxed max-w-xl mb-9">
-                Currently: partnership strategy at{' '}
-                <a href="https://www.helloeve.co" target="_blank" rel="noopener noreferrer" className="text-teal-accent border-b border-teal-accent/30 hover:border-teal-accent transition-colors">Eve</a>,
-                advisory work through{' '}
-                <a href="https://www.moontaxilab.com" target="_blank" rel="noopener noreferrer" className="text-teal-accent border-b border-teal-accent/30 hover:border-teal-accent transition-colors">Moontaxi Lab</a>,
-                and teaching AI to anyone curious enough to ask.
               </p>
 
               <div className="flex flex-wrap gap-3">
