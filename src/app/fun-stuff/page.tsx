@@ -15,17 +15,20 @@ export default function FunStuff() {
   return (
     <>
       {/* Header */}
-      <section className="pt-32 pb-8 bg-cream">
+      <section className="pt-32 pb-12 md:pt-40 bg-cream">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.7 }}
           >
-            <h1 className="font-serif text-4xl md:text-5xl font-bold text-slate-dark mb-4">
-              Fun Stuff
+            <p className="text-xs font-semibold tracking-[0.16em] uppercase text-teal-accent mb-5">
+              Off the clock
+            </p>
+            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-slate-dark leading-[1.1] tracking-tight mb-5">
+              Fun <span className="italic text-teal-accent">stuff</span>
             </h1>
-            <p className="text-xl text-slate-dark/70 max-w-2xl">
+            <p className="text-lg text-slate-dark/70 max-w-2xl leading-relaxed">
               Life beyond work for travel, snowboarding, winemaking, and city fun.
             </p>
           </motion.div>
@@ -33,7 +36,7 @@ export default function FunStuff() {
       </section>
 
       {/* Categories Grid */}
-      <section className="py-12 bg-white">
+      <section className="py-12 md:py-16 bg-white border-t border-warm-gray">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-6">
             {categories.map((category, index) => (
@@ -43,7 +46,7 @@ export default function FunStuff() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
-                  className="group relative aspect-[4/3] rounded-xl overflow-hidden cursor-pointer"
+                  className="group relative aspect-[4/3] rounded-xl overflow-hidden cursor-pointer border border-warm-gray"
                 >
                   <Image
                     src={category.image}

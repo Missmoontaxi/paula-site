@@ -13,7 +13,7 @@ const contactMethods = [
   },
   {
     icon: Calendar,
-    label: 'Book Time',
+    label: 'Book time',
     value: 'Schedule 30 min',
     href: 'https://calendly.com/hello-paulamcmahon/30min',
   },
@@ -31,24 +31,18 @@ const socialLinks = [
     label: 'Instagram',
     href: 'https://www.instagram.com/moontaxi?igsh=dTJ3dGpmem5zNm02&utm_source=qr',
     username: '@moontaxi',
-    color: 'text-pink-500',
-    bgHover: 'group-hover:bg-pink-50',
   },
   {
     icon: Linkedin,
     label: 'LinkedIn',
     href: 'https://www.linkedin.com/in/paulamcmahon/',
     username: 'Paula McMahon',
-    color: 'text-blue-600',
-    bgHover: 'group-hover:bg-blue-50',
   },
   {
     icon: Twitter,
     label: 'X / Twitter',
     href: 'https://x.com/missmoontaxi?s=21&t=7AB5d2wTLsrs1UcZNFw65w',
     username: '@missmoontaxi',
-    color: 'text-slate-900',
-    bgHover: 'group-hover:bg-slate-100',
   },
 ]
 
@@ -81,11 +75,14 @@ export default function ContactPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="font-serif text-4xl md:text-5xl font-bold text-slate-dark mb-6">
-              Connect
+            <p className="text-xs font-semibold tracking-[0.16em] uppercase text-teal-accent mb-5">
+              Get in touch
+            </p>
+            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-slate-dark leading-[1.1] tracking-tight mb-5">
+              Let&apos;s <span className="italic text-teal-accent">connect.</span>
             </h1>
-            <p className="text-xl text-slate-dark/70 max-w-2xl mx-auto">
-              I'm always looking for new connections and exciting projects. Reach out!
+            <p className="text-lg text-slate-dark/70 max-w-2xl mx-auto leading-relaxed">
+              I&apos;m always looking for new connections and exciting projects. Reach out!
             </p>
           </motion.div>
         </div>
@@ -103,7 +100,7 @@ export default function ContactPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 whileHover={{ y: -8, scale: 1.02 }}
-                className="text-center p-6 rounded-2xl bg-white hover:bg-gradient-to-b hover:from-teal-accent/5 hover:to-transparent hover:shadow-xl transition-all duration-300 cursor-default"
+                className="text-center p-6 rounded-2xl bg-white border border-warm-gray hover:border-teal-accent/40 hover:bg-gradient-to-b hover:from-teal-accent/5 hover:to-transparent hover:shadow-xl transition-all duration-300 cursor-default"
               >
                 <motion.div
                   className="w-16 h-16 bg-teal-accent/10 rounded-full flex items-center justify-center mx-auto mb-4"
@@ -136,7 +133,7 @@ export default function ContactPage() {
             className="text-center"
           >
             <h2 className="font-serif text-2xl font-bold text-slate-dark mb-8">
-              Follow Along
+              Follow along
             </h2>
             <div className="flex justify-center gap-6">
               {socialLinks.map((social, index) => (
@@ -153,7 +150,7 @@ export default function ContactPage() {
                   transition={{ duration: 0.4, delay: index * 0.1 }}
                 >
                   <motion.div
-                    className={`w-12 h-12 bg-slate-dark/5 ${social.bgHover} rounded-full flex items-center justify-center transition-colors`}
+                    className="w-12 h-12 bg-teal-accent/10 group-hover:bg-teal-accent rounded-full flex items-center justify-center transition-colors"
                     whileHover={{
                       scale: 1.2,
                       rotate: [0, -10, 10, -10, 0],
@@ -163,7 +160,7 @@ export default function ContactPage() {
                       rotate: { duration: 0.5 }
                     }}
                   >
-                    <social.icon size={24} className={`${social.color} transition-colors`} />
+                    <social.icon size={24} className="text-teal-accent group-hover:text-white transition-colors" />
                   </motion.div>
                   <span className="text-sm text-slate-dark/70 group-hover:text-slate-dark transition-colors">
                     {social.username}
@@ -178,7 +175,7 @@ export default function ContactPage() {
       {/* NYC Skyline Section */}
       <section className="relative h-64 md:h-80 overflow-hidden">
         <Image
-          src="https://images.unsplash.com/photo-1541336032412-2048a678540d?w=1920&q=80"
+          src="/images/nyc/NYC7.jpg"
           alt="New York City skyline at night"
           fill
           className="object-cover"
@@ -213,19 +210,19 @@ export default function ContactPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="font-serif text-3xl md:text-4xl font-bold mb-6">
-              Let's Work Together
+            <h2 className="font-serif text-3xl md:text-4xl font-bold mb-6 leading-tight">
+              Let&apos;s work <span className="italic text-teal-light">together.</span>
             </h2>
-            <p className="text-white/70 mb-8 max-w-2xl mx-auto">
-              Whether you're building something new, transforming something established,
-              or just want to connect about AI or tacos, I'd love to connect.
+            <p className="text-white/70 mb-8 max-w-2xl mx-auto leading-relaxed">
+              Whether you&apos;re building something new, transforming something established,
+              or just want to connect about AI or tacos, I&apos;d love to connect.
             </p>
             <a
               href="mailto:hello@paulamcmahon.com"
               className="inline-flex items-center gap-2 bg-teal-accent hover:bg-teal-light text-white px-8 py-4 rounded-lg transition-colors font-medium text-lg"
             >
               <Mail size={20} />
-              Send Me an Email
+              Send me an email
             </a>
           </motion.div>
         </div>
