@@ -47,13 +47,13 @@ const now = [
     idx: '01',
     title: 'Eve, the Executive Voice Engine',
     href: 'https://www.helloeve.co',
-    desc: 'Partnership strategy, scaling operations, sales enablement, and building the ambassador program. Turning a high-trust community into a growth engine.',
+    desc: 'Founding team operating leader at Eve, an AI-native company building the future of work for high-trust service businesses. Leading Partnerships & Ecosystem from New York after building foundational GTM, strategy, and resource systems.',
   },
   {
     idx: '02',
     title: 'Moontaxi Lab',
     href: 'https://www.moontaxilab.com',
-    desc: "My advisory practice and project space for AI strategy, GTM, scale ops, and whatever's interesting. The portfolio and the mystery.",
+    desc: "My advisory practice and project space for AI strategy, GTM, scale ops, and whatever's interesting. It's an AI-native operating studio where I work alongside founders to shape the growth strategy, then ship the operating systems as code and stay in the build until it runs. The portfolio and the mystery.",
   },
   {
     idx: '03',

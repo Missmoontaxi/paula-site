@@ -1,10 +1,11 @@
 import Link from 'next/link'
-import { Instagram, Linkedin, Twitter } from 'lucide-react'
+import { Github, Instagram, Linkedin, Twitter } from 'lucide-react'
 
 const socialLinks = [
   { href: 'https://www.instagram.com/moontaxi?igsh=dTJ3dGpmem5zNm02&utm_source=qr', icon: Instagram, label: 'Instagram' },
   { href: 'https://www.linkedin.com/in/paulamcmahon/', icon: Linkedin, label: 'LinkedIn' },
   { href: 'https://x.com/missmoontaxi?s=21&t=7AB5d2wTLsrs1UcZNFw65w', icon: Twitter, label: 'X / Twitter' },
+  { href: 'https://github.com/Missmoontaxi', icon: Github, label: 'GitHub' },
 ]
 
 export default function Footer() {

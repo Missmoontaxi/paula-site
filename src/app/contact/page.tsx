@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import { Mail, Calendar, Instagram, Linkedin, Twitter, MapPin } from 'lucide-react'
+import { Mail, Calendar, Github, Instagram, Linkedin, Twitter, MapPin } from 'lucide-react'
 
 const contactMethods = [
   {
@@ -43,6 +43,12 @@ const socialLinks = [
     label: 'X / Twitter',
     href: 'https://x.com/missmoontaxi?s=21&t=7AB5d2wTLsrs1UcZNFw65w',
     username: '@missmoontaxi',
+  },
+  {
+    icon: Github,
+    label: 'GitHub',
+    href: 'https://github.com/Missmoontaxi',
+    username: '@Missmoontaxi',
   },
 ]
 
