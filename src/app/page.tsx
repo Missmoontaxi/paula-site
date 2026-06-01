@@ -105,15 +105,6 @@ export default function Home() {
                   My story
                   <ArrowRight size={18} />
                 </Link>
-                <a
-                  href="https://www.moontaxilab.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 border border-slate-dark/20 hover:border-slate-dark/50 text-slate-dark px-6 py-3 rounded-lg font-medium transition-colors"
-                >
-                  See the work
-                  <ArrowRight size={18} />
-                </a>
               </div>
             </motion.div>
 
