@@ -11,13 +11,15 @@ export const metadata: Metadata = {
   authors: [{ name: 'Paula McMahon' }],
   openGraph: {
     title: 'Paula McMahon | AI Leader & Transformative Executive',
-    description: 'AI enthusiast and transformative leader based in New York City',
+    description: 'AI leader and builder across strategy, partnerships, product, and community. Rooted in science, scaled platforms to millions, now shipping with AI.',
     type: 'website',
     url: 'https://www.paulamcmahon.com',
-    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Paula McMahon — AI leader' }],
+    images: [{ url: '/og-image.png', width: 2400, height: 1260, alt: 'Paula McMahon — AI leader' }],
   },
   twitter: {
     card: 'summary_large_image',
+    title: 'Paula McMahon | AI Leader & Transformative Executive',
+    description: 'AI leader and builder across strategy, partnerships, product, and community. Rooted in science, scaled platforms to millions, now shipping with AI.',
     images: ['/og-image.png'],
   },
 }
