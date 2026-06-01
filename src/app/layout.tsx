@@ -4,6 +4,7 @@ import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.paulamcmahon.com'),
   title: 'Paula McMahon | AI Leader & Transformative Executive',
   description: 'Paula McMahon is an AI enthusiast and transformative leader based in New York City, with experience at Disney, Yahoo, and leading AI communities.',
   keywords: ['Paula McMahon', 'AI Leader', 'Technology Executive', 'Disney', 'AI Collective', 'Product Management'],
@@ -12,6 +13,12 @@ export const metadata: Metadata = {
     title: 'Paula McMahon | AI Leader & Transformative Executive',
     description: 'AI enthusiast and transformative leader based in New York City',
     type: 'website',
+    url: 'https://www.paulamcmahon.com',
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Paula McMahon — AI leader' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['/og-image.png'],
   },
 }
 
