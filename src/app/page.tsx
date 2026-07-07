@@ -53,7 +53,7 @@ const now = [
     idx: '02',
     title: 'Moontaxi Lab',
     href: 'https://www.moontaxilab.com',
-    desc: "My advisory practice and project space for AI strategy, GTM, scale ops, and whatever's interesting. It's an AI-native operating studio where I work alongside founders to shape the growth strategy, then ship the operating systems as code and stay in the build until it runs. The portfolio and the mystery.",
+    desc: "It's an AI-native operating studio where I work alongside builders and creators to experiment and with founders to shape growth strategies. A portfolio with a little mystery.",
   },
   {
     idx: '03',
@@ -83,7 +83,7 @@ export default function Home() {
               transition={{ duration: 0.7 }}
             >
               <p className="text-lg md:text-xl text-slate-dark/60 mb-6">
-                Hi, I&apos;m Paula
+                Hi, I&apos;m Paula.
               </p>
 
               <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-slate-dark leading-[1.1] tracking-tight mb-6">
