@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ArrowRight, ArrowUpRight, Radar, Library, Workflow, Globe, Quote } from 'lucide-react'
+import { ArrowUpRight, Radar, Library, Workflow, Globe } from 'lucide-react'
 
 const fadeInUp = {
   initial: { opacity: 0, y: 24 },
@@ -77,6 +77,9 @@ const rooms = [
   'SWITCH, angel group',
   'Next Play',
   'AI-Powered Women',
+  'API Days, speaker',
+  'FOST, event host',
+  'NY Tech Week, Demo Night host',
 ]
 
 export default function ProofPage() {
@@ -233,26 +236,8 @@ export default function ProofPage() {
         </div>
       </section>
 
-      {/* ⑤ WHAT PEOPLE SAY */}
-      {/* TODO (Paula): confirm the full Thomas Kelley quote and his title from the LinkedIn
-          recommendation, and add Supriya's quote here once blessed. */}
+      {/* ⑤ ROOMS I RUN */}
       <section className="bg-cream border-t border-warm-gray py-20 md:py-24">
-        <div className="max-w-3xl mx-auto px-6 text-center">
-          <motion.div {...fadeInUp}>
-            <p className="text-xs font-semibold tracking-[0.16em] uppercase text-teal-accent mb-8">
-              What people say
-            </p>
-            <Quote size={32} className="mx-auto text-teal-accent/40 mb-6" />
-            <blockquote className="font-serif text-2xl md:text-3xl text-slate-dark leading-snug mb-6">
-              &ldquo;A phenomenal leader and instinctive technologist.&rdquo;
-            </blockquote>
-            <p className="text-sm text-slate-dark/60">Thomas Kelley</p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* ⑥ ROOMS I RUN */}
-      <section className="bg-white border-t border-warm-gray py-20 md:py-24">
         <div className="max-w-4xl mx-auto px-6">
           <motion.div {...fadeInUp} className="mb-10 text-center">
             <p className="text-xs font-semibold tracking-[0.16em] uppercase text-teal-accent mb-4">
@@ -272,36 +257,11 @@ export default function ProofPage() {
             {rooms.map((room) => (
               <span
                 key={room}
-                className="px-4 py-2 rounded-full border border-warm-gray bg-cream text-sm text-slate-dark/80"
+                className="px-4 py-2 rounded-full border border-warm-gray bg-white text-sm text-slate-dark/80"
               >
                 {room}
               </span>
             ))}
-          </motion.div>
-        </div>
-      </section>
-
-      {/* ⑦ CTA */}
-      <section className="bg-slate-dark text-white py-20 md:py-24">
-        <div className="max-w-3xl mx-auto px-6 text-center">
-          <motion.div {...fadeInUp}>
-            <p className="text-xs font-semibold tracking-[0.16em] uppercase text-teal-light mb-4">
-              The fastest way to know
-            </p>
-            <h2 className="font-serif text-3xl md:text-4xl font-bold mb-5 leading-tight">
-              Give me a <span className="italic text-teal-light">real problem.</span>
-            </h2>
-            <p className="text-white/70 max-w-xl mx-auto mb-9 leading-relaxed">
-              Hand me a problem from your desk and I will ship an answer in 48 hours. It beats
-              another interview round, and we will both know.
-            </p>
-            <a
-              href="mailto:hello@paulamcmahon.com"
-              className="inline-flex items-center gap-2 bg-teal-accent hover:bg-teal-light text-white px-8 py-4 rounded-lg transition-colors font-medium text-lg"
-            >
-              Say hello
-              <ArrowRight size={20} />
-            </a>
           </motion.div>
         </div>
       </section>
