@@ -11,11 +11,11 @@ const fadeInUp = {
 }
 
 const stats = [
-  { n: '150M+', l: 'Disney+ subscribers across 100+ countries, from first New York hire' },
+  { n: '150M+', l: 'Disney+ subscribers across 100+ countries, as first New York hire' },
   { n: '$156M', l: 'P&L modernized at Yahoo, with roughly 120% revenue growth' },
   { n: '50+', l: 'partner portfolio built from zero at Disney+' },
-  { n: '250K+', l: 'AI Collective members, scaled from 35K; NYC Chapter Lead' },
-  { n: '12+', l: 'founder showcase events hosted across New York City' },
+  { n: '250K+', l: 'AI Collective members, scaled from 25K; NYC Chapter Lead' },
+  { n: '14+', l: 'founder showcase events hosted across New York City' },
 ]
 
 const systems = [
@@ -33,7 +33,7 @@ const systems = [
     title: 'Eve Resource Center',
     status: 'Live on helloeve.co',
     description:
-      'Partner-facing resource hub designed and built from scratch. Replaced a contracted web build with something shipped in-house in days.',
+      'Partner-facing resource hub designed and built from scratch for partners and prospects.',
     href: 'https://www.helloeve.co/',
     linkLabel: 'Visit helloeve.co',
   },
@@ -42,11 +42,11 @@ const systems = [
     title: 'GTM agent stack',
     status: 'In production at Eve, private',
     description:
-      'Prospect research, competitor one-pagers, and pipeline automations shipped in Claude Code. Runs the partner motion every day.',
+      'Prospect research, competitor one-pagers, and discovery pipeline automations shipped in Claude Code. Runs the daily partner motion.',
   },
   {
     icon: Globe,
-    title: 'This site, and the Lab',
+    title: 'Hub Sites',
     status: 'Live',
     description:
       'paulamcmahon.com and moontaxilab.com: both designed, built, and deployed by me on Next.js, Tailwind, and Vercel. The lab notebook lives at the Lab.',
@@ -58,7 +58,7 @@ const systems = [
 const waves = [
   {
     label: 'The science years',
-    text: 'Bioinformatics and robotics to automate preclinical drug discovery at Bristol Myers Squibb and Cytokinetics, before tech bio had a name.',
+    text: 'Bioinformatics and robotics to automate preclinical drug discovery at Bristol Myers Squibb and Cytokinetics, before AI and big data had a name.',
   },
   {
     label: 'The big company years',
@@ -72,14 +72,14 @@ const waves = [
 
 const rooms = [
   'The AI Collective, NYC Chapter Lead',
-  'Chief, founding member',
+  'Chief, Founding Member',
   'Laconia Venture Cooperative, Venture Fellow',
-  'SWITCH, angel group',
+  'SWITCH, Angel Group',
   'Next Play',
   'AI-Powered Women',
-  'API Days, speaker',
-  'FOST, event host',
-  'NY Tech Week, Demo Night host',
+  'API Days Speaker',
+  'FOST Conference Host',
+  'NY Tech Week, Demo Night Host',
 ]
 
 export default function ProofPage() {
@@ -231,7 +231,7 @@ export default function ProofPage() {
             {...fadeInUp}
             className="text-center font-serif text-xl md:text-2xl text-slate-dark mt-12 italic"
           >
-            Same operator. Third wave. Best toolkit yet.
+            Same operator. Third wave. Most fun yet.
           </motion.p>
         </div>
       </section>
@@ -247,9 +247,8 @@ export default function ProofPage() {
               Rooms I <span className="italic text-teal-accent">run</span>
             </h2>
             <p className="text-slate-dark/70 mt-4 max-w-2xl mx-auto leading-relaxed">
-              12+ founder showcase events, women-only operator panels, and workshops with the top
-              AI platforms, all hosted in New York City. The communities below are active, not
-              alumni lists.
+              14+ founder showcase events, women-only operator panels, and workshops with the top
+              AI platforms, all hosted in New York City. The communities below are active.
             </p>
           </motion.div>
 
