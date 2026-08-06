@@ -29,7 +29,7 @@ const arc = [
     num: '03',
     title: 'The Builder Years',
     where: 'New York · Everywhere',
-    body: 'Grew The AI Collective from 25K to 250K+. Now building partnerships and ecosystem at Eve and running Moontaxi Lab. Shipping things myself. Still riding the wave.',
+    body: 'Grew The AI Collective from 35K to 250K+. Now building partnerships and ecosystem at Eve and running Moontaxi Lab. Shipping things myself. Still riding the wave.',
   },
 ]
 

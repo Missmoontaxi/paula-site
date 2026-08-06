@@ -43,7 +43,7 @@ const experience = [
   {
     company: 'The AI Collective',
     role: 'Head of Operations',
-    description: "Driving strategy and execution for integrated operations across the global AI Collective community and NYC Chapter, scaling the team while upholding the Collective's values in New York City's vibrant tech culture.",
+    description: "Drove strategy and execution for integrated operations across the global AI Collective community and NYC Chapter, scaling the team while upholding the Collective's values in New York City's vibrant tech culture.",
   },
   {
     company: 'The Walt Disney Studios',

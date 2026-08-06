@@ -14,7 +14,7 @@ const stats = [
   { n: '150M+', l: 'Disney+ subscribers across 100+ countries, as first New York hire' },
   { n: '$156M', l: 'P&L modernized at Yahoo, with roughly 120% revenue growth' },
   { n: '50+', l: 'partner portfolio built from zero at Disney+' },
-  { n: '250K+', l: 'AI Collective members, scaled from 25K; NYC Chapter Lead' },
+  { n: '250K+', l: 'AI Collective members, scaled from 35K; NYC Chapter Lead' },
   { n: '14+', l: 'founder showcase events hosted across New York City' },
 ]
 
