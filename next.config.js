@@ -17,6 +17,16 @@ const nextConfig = {
         destination: '/fun-stuff',
         permanent: true,
       },
+      {
+        source: '/about-5',
+        destination: '/about',
+        permanent: true,
+      },
+      {
+        source: '/portfolio',
+        destination: '/proof',
+        permanent: true,
+      },
     ]
   },
   images: {
