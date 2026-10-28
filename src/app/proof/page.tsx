@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ArrowUpRight, Radar, Library, Workflow, Globe } from 'lucide-react'
+import { ArrowUpRight, Radar, Library, Workflow, Globe, Bot } from 'lucide-react'
 
 const fadeInUp = {
   initial: { opacity: 0, y: 24 },
@@ -14,11 +14,27 @@ const stats = [
   { n: '150M+', l: 'Disney+ subscribers across 100+ countries, as first New York hire' },
   { n: '$156M', l: 'P&L modernized at Yahoo, with roughly 120% revenue growth' },
   { n: '50+', l: 'partner portfolio built from zero at Disney+' },
-  { n: '250K+', l: 'AI Collective members, scaled from 35K; NYC Chapter Lead' },
+  { n: '400K+', l: 'AI Collective members, scaled from 35K; NYC Chapter Lead' },
   { n: '14+', l: 'founder showcase events hosted across New York City' },
 ]
 
-const systems = [
+const systems: {
+  icon: typeof Bot
+  title: string
+  status: string
+  description: string
+  href?: string
+  linkLabel?: string
+  featured?: boolean
+}[] = [
+  {
+    icon: Bot,
+    title: 'An AI chief of staff',
+    status: 'In build, opens November',
+    description:
+      'A working demo of an AI chief of staff for a fictional CEO. Claude and GPT behind one gateway, an eval suite in CI that grades every daily brief, hard cost guardrails, and an MCP connector that works inside Claude and ChatGPT. The link goes live in November.',
+    featured: true,
+  },
   {
     icon: Radar,
     title: 'Eve Events Radar',
@@ -66,7 +82,7 @@ const waves = [
   },
   {
     label: 'The builder years',
-    text: 'Founding-team Partnerships & Ecosystem at Eve. The AI Collective scaled from 35K to 250K+ members, with the NYC chapter led from the front. Systems shipped in Claude Code, in production, on GitHub.',
+    text: 'Founding-team Partnerships & Ecosystem at Eve. The AI Collective scaled from 35K to 400K+ members, with the NYC chapter led from the front. Systems shipped in Claude Code, in production, on GitHub.',
   },
 ]
 
@@ -139,8 +155,7 @@ export default function ProofPage() {
               Systems in <span className="italic text-teal-accent">production</span>
             </h2>
             <p className="text-slate-dark/70 mt-4 max-w-2xl leading-relaxed">
-              Built hands-on in Claude Code, deployed, and in daily use. Not directed from a
-              distance, and not demos.
+              Built hands-on in Claude Code and deployed. Not directed from a distance.
             </p>
           </motion.div>
 
@@ -150,7 +165,7 @@ export default function ProofPage() {
                 key={system.title}
                 {...fadeInUp}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group rounded-xl border border-warm-gray bg-white p-7 transition-all duration-300 hover:border-teal-accent/40 hover:shadow-[0_8px_30px_-12px_rgba(26,95,90,0.25)]"
+                className={`${system.featured ? 'md:col-span-2 ' : ''}group rounded-xl border border-warm-gray bg-white p-7 transition-all duration-300 hover:border-teal-accent/40 hover:shadow-[0_8px_30px_-12px_rgba(26,95,90,0.25)]`}
               >
                 <div className="flex items-start justify-between mb-4">
                   <div className="w-12 h-12 bg-teal-accent/10 rounded-lg flex items-center justify-center group-hover:bg-teal-accent transition-colors duration-300">

@@ -97,7 +97,7 @@ export default function ExperiencePage() {
               <span className="italic text-teal-accent">AI.</span>
             </h1>
             <p className="text-lg text-slate-dark/70 leading-relaxed max-w-2xl">
-              A career of building, scaling, and transforming — across science, media,
+              A career of building, scaling, and transforming across science, media,
               and technology.
             </p>
           </motion.div>

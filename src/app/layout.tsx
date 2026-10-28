@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     description: 'AI leader and builder across strategy, partnerships, product, and community. Rooted in science, scaled platforms to millions, now shipping with AI.',
     type: 'website',
     url: 'https://www.paulamcmahon.com',
-    images: [{ url: '/og-image.png', width: 2400, height: 1260, alt: 'Paula McMahon — AI leader' }],
+    images: [{ url: '/og-image.png', width: 2400, height: 1260, alt: 'Paula McMahon, AI leader' }],
   },
   twitter: {
     card: 'summary_large_image',

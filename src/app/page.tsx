@@ -29,7 +29,7 @@ const arc = [
     num: '03',
     title: 'The Builder Years',
     where: 'New York · Everywhere',
-    body: 'Grew The AI Collective from 35K to 250K+. Now building partnerships and ecosystem at Eve and running Moontaxi Lab. Shipping things myself. Still riding the wave.',
+    body: 'Grew The AI Collective from 35K to 400K+. Joined Eve\'s founding team. Now building an AI chief of staff in public. Shipping things myself. Still riding the wave.',
   },
 ]
 
@@ -47,16 +47,22 @@ const now = [
     idx: '01',
     title: 'Eve, the Executive Voice Engine',
     href: 'https://www.helloeve.co',
-    desc: 'Founding team operating leader at Eve, an AI-native company building the future of work for high-trust service businesses. Leading Partnerships & Ecosystem from New York after building foundational GTM, strategy, and resource systems.',
+    desc: 'Founding team at Eve, an AI-native company building the future of work for high-trust service businesses. Started as founding operator and fractional COO, building the operating foundation, GTM strategy, and the Eve Resource Center in Claude Code. Now leading Partnerships & Ecosystem from New York.',
   },
   {
     idx: '02',
+    title: 'Coming in November: an AI chief of staff',
+    href: null,
+    desc: 'A working demo of an AI chief of staff for a fictional CEO. A daily brief where every card flips to show its receipts, Claude and GPT behind one gateway, an eval suite that grades the work, and hard cost guardrails. It plugs into the assistants people already use, including Claude and ChatGPT. Built by me, opening up in November.',
+  },
+  {
+    idx: '03',
     title: 'Moontaxi Lab',
     href: 'https://www.moontaxilab.com',
     desc: "It's an AI-native operating studio where I work alongside builders and creators to experiment and with founders to shape growth strategies. A portfolio with a little mystery.",
   },
   {
-    idx: '03',
+    idx: '04',
     title: 'Teaching AI with friends',
     href: null,
     desc: 'Running upskilling sessions with AI curious in my network. Building agents, playbooks, and skills as code alongside people who are excited to learn and build.',
